@@ -1,0 +1,3406 @@
+.carConfirmLeft {
+  width: 275px;
+  margin-right: 10px;
+  @include respond-to(desk-screens) {
+    width: 100%;
+  }
+  // @include respond-to(lap-screens){width:33.3%;}
+  @include respond-to(all-screens) {
+    width: 100%;
+  }
+  .carConfirmImgDiv {
+    width: 100%;
+    display: block;
+    text-align: left;
+    border-bottom: 1px dashed $thBorder;
+    .carLogoWidth {
+      width: auto;
+      height: auto;
+    }
+    .carImageOnly {
+      width: 100%;
+      display: block;
+      text-align: right;
+      .carImgWid {
+        width: 90%;
+        /* text-align: right; */
+        height: 170px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .resizeImg {
+    width: 12px;
+    height: auto;
+  }
+  .confirmScreenPick {
+    width: 100%;
+    align-items: self-start;
+    display: flex;
+    .pickupDropDet {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 49%;
+      @include respond-to(mobile-screens) {
+        width: 100%;
+      }
+      display: inline-block;
+      li {
+        padding: 3px;
+        display: block;
+        width: 100%;
+        h6 {
+          font-size: 13px;
+          font-weight: 300;
+          margin: 0px;
+        }
+        p {
+          font-size: 12px;
+          margin: 0px;
+        }
+      }
+    }
+  }
+}
+
+.carConfirmRight {
+  @include respond-to(desk-screens) {
+    width: 100%;
+  }
+  // @include respond-to(lap-screens){width:33.3%;}
+  @include respond-to(all-screens) {
+    width: 100%;
+  }
+  .carInfo {
+    width: 100%;
+    h4 {
+      font-size: 18px;
+      font-weight: 200;
+      margin-top: 10px;
+      color: $fontColor;
+      img {
+        width: 20px;
+      }
+    }
+
+    h6 {
+      font-size: 13px;
+      font-weight: 100;
+      color: $fontColor;
+      img {
+        width: 15px;
+      }
+    }
+    .carInfraStru {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid $tabborder;
+      li {
+        display: inline-block;
+        padding: 10px 15px;
+        color: $fontColor;
+        font-size: 14px;
+        img {
+          width: 15px;
+        }
+        &:nth-child(2) {
+          img {
+            width: 20px;
+          }
+        }
+        &:nth-child(3) {
+          img {
+            width: 12px;
+          }
+        }
+      }
+    }
+  }
+  p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .carInfoDiv {
+    width: 100%;
+    border: 1px solid $tabborder;
+    background: #ebebeb;
+    color: $fontColor;
+    font-size: 14px;
+    padding: 8px;
+    position: relative;
+    margin-top: 10px;
+    img {
+      width: 40px;
+      display: inline-table;
+      vertical-align: middle;
+    }
+    p {
+      margin: 0;
+      width: 80%;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 13px;
+      display: inline-table;
+      vertical-align: middle;
+    }
+    &:hover {
+      .moreDetailToolTip {
+        display: block;
+      }
+    }
+    .moreDetailToolTip {
+      position: absolute;
+      background: #ffffff;
+      z-index: 9;
+      padding: 10px;
+      width: 400px;
+      height: 200px;
+      overflow: auto;
+      border: 1px solid $primaryColor;
+      left: 0px;
+      top: 44px;
+      -webkit-box-shadow: 2px 2px 6px 0px #d4d0d0;
+      -moz-box-shadow: 2px 2px 6px 0px #d4d0d0;
+      display: none;
+      @include respond-to(mobile-screens) {
+        width: 100%;
+        left: 0px;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 17px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid $secondryColor;
+        box-shadow: 2px 2px 6px 0px #d4d0d0;
+      }
+      p {
+        font-weight: 300;
+        color: $fontColor;
+        margin-bottom: 5px;
+        width: 100%;
+        strong,
+        b {
+          font-weight: bold;
+          color: $fontColor;
+        }
+        h6 {
+          cursor: pointer;
+          padding: 2px;
+        }
+        .InfoHover h6:hover + p {
+          display: block;
+        }
+        .InfoHover p {
+          display: none;
+        }
+      }
+    }
+  }
+  .totalAmountDis {
+    margin-bottom: 15px;
+  }
+  .carCheckin {
+    li {
+      @include respond-to(mobile-screens) {
+        width: 33.3% !important;
+      }
+    }
+  }
+  .checkInOut {
+    li {
+      @include respond-to(mobile-screens) {
+        width: 49% !important;
+      }
+    }
+  }
+}
+
+.contactUsBg {
+  background: #f8f8f8;
+  width: 100%;
+  min-height: 400px;
+  padding: 30px 10px;
+  position: relative;
+  margin-top: 3px;
+  h6 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #464646;
+  }
+  h2 {
+    font-weight: 300;
+    font-size: 20px;
+    color: #464646;
+  }
+  h3 {
+    font-weight: 300;
+    font-size: 19px;
+    color: #464646;
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #464646;
+  }
+  p {
+    color: #464646;
+  }
+  .container {
+    position: relative;
+    z-index: 9;
+  }
+  &:after {
+    // position: absolute;
+    // content: '';
+    // background:url('../images/aboutUs/contactusBanner.png');
+    // width: 100%;
+    // left: 0;
+    // height: 100%;
+    // top: 0;
+    // background-size: 100% 100%;
+    // z-index: 0;
+    // opacity: 0.3;
+  }
+  .contactUsTitle {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    h3 {
+      font-family: "Montserrat";
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-weight: 300;
+      font-size: 1.75rem;
+      color: #464646;
+      text-transform: uppercase;
+    }
+  }
+  input {
+    border: 1px solid $tabborder;
+    width: 100%;
+    padding: 8px;
+    background: rgba(248, 248, 248, 0.8);
+    color: #464646;
+    outline: none;
+    &:focus {
+      border-color: #80bdff;
+    }
+  }
+  textarea {
+    border: 1px solid $tabborder;
+    width: 100%;
+    padding: 8px;
+    height: 105px;
+    resize: none;
+    background: rgba(248, 248, 248, 0.8);
+    color: #464646;
+    outline: none;
+    &:focus {
+      border-color: #80bdff;
+    }
+  }
+  select {
+    border: 1px solid $tabborder;
+    width: 100%;
+    padding: 8px;
+    resize: none;
+    background: rgba(248, 248, 248, 0.8) url("../images/selarrow.png") no-repeat
+      92% 50%;
+    color: #464646;
+    outline: none;
+    -webkit-appearance: none;
+    &:focus {
+      border-color: #80bdff;
+    }
+  }
+  .contactMap {
+    width: 100%;
+    height: 200px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .contactInfos {
+    width: 100%;
+    display: block;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        display: block;
+        span {
+          display: inline-table;
+          vertical-align: top;
+          img {
+            width: 23px;
+          }
+        }
+        p,
+        address {
+          display: inline-table;
+          vertical-align: middle;
+          margin-left: 15px;
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+.wishListCollapse {
+  width: 371px;
+  margin: 10px;
+  display: block;
+  @include respond-to(desk-screens) {
+    width: 100%;
+    margin: 10px 0px;
+  }
+  @include respond-to(all-screens) {
+    width: 100%;
+    margin: 10px 0px;
+  }
+  .wishListCollapseTitle {
+    width: 100%;
+    background: #f8f8f8;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    position: relative;
+    padding: 10px;
+    height: 90px;
+    .wishListTitle {
+      position: relative;
+      width: 100%;
+      h3 {
+        font-size: 15px;
+        text-align: center;
+        margin-top: 15px;
+        width: 210px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 10px auto;
+      }
+      img {
+        position: absolute;
+        top: -10px;
+        right: 60px;
+        cursor: pointer;
+      }
+    }
+
+    .roadImgSty {
+      width: 85%;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .openNewTab {
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      display: flex;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      /* padding: 2px 7px; */
+      justify-content: center;
+      cursor: pointer;
+      align-items: center;
+      img {
+        width: 12px;
+        height: 12px;
+      }
+    }
+    .delete {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      background: #fff;
+      display: flex;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      /* padding: 2px 7px; */
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 12px;
+        height: 14px;
+      }
+    }
+    .expanded {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      width: 20px;
+      margin: auto;
+      cursor: pointer;
+    }
+  }
+
+  .card {
+    border-radius: 0px;
+    background: #ebebeb;
+    .wishListCard {
+      background: #fff;
+      border: 1px solid $tabborder;
+      border-radius: 4px;
+      width: 100%;
+      display: block;
+      padding: 10px;
+      float: left;
+      .wishListCardTitle {
+        width: 100%;
+        display: inline-flex;
+        border-bottom: 2px solid $tabborder;
+        padding: 10px 0px;
+        float: left;
+        align-items: center;
+        margin-bottom: 15px;
+        span {
+          width: 35px;
+          height: 35px;
+          display: block;
+          border: 1px solid $tabborder;
+          border-radius: 50%;
+          padding: 3px 6px;
+          float: left;
+          margin-right: 10px;
+          img {
+            width: 22px;
+          }
+        }
+        h3 {
+          text-transform: uppercase;
+          font-size: 24px;
+          margin-bottom: 0px;
+          color: $fontColor;
+          font-weight: 300;
+        }
+      }
+      .wishListCardBody {
+        width: 100%;
+        display: block;
+        float: left;
+        .checkInOut {
+          text-align: center;
+          margin: 0;
+          padding: 10px 0px;
+          list-style: none;
+          li {
+            display: inline-block;
+            padding: 3px 8px;
+            text-align: center;
+            vertical-align: middle;
+          }
+          li img {
+            width: 35px;
+            margin-right: 2px;
+            margin: 0px 10px;
+            display: inline-table;
+            vertical-align: middle;
+          }
+          li span {
+            display: inline-table;
+            vertical-align: middle;
+            font-size: 13px;
+            font-weight: 600;
+            color: #464646;
+          }
+          li span b {
+            display: block;
+          }
+        }
+        .carInfraStru {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        //  border-bottom: 1px solid #6a6a6a;
+          li {
+            display: inline-block;
+            padding: 15px 15px 0px 0px;
+            color: #464646;
+            font-size: 14px;
+          }
+          li img {
+            width: 12px;
+            margin: 0px 10px;
+            display: inline-table;
+            vertical-align: middle;
+
+          }
+         
+        }
+
+        .FlightStatus {
+          list-style: none;
+          padding: 0;
+          margin: 0px 0px 10px 0;
+          &.borderbtm {
+            border-bottom: 1px dashed $tabborder;
+            padding-bottom: 15px;
+          }
+
+          li {
+            display: inline-table;
+            vertical-align: middle;
+            width: 120px;
+            &:nth-child(2) {
+              width: 50px;
+              text-align: center;
+              img {
+                margin-top: 35px;
+                vertical-align: bottom;
+              }
+            }
+            .flightDet {
+              width: 100%;
+              display: block;
+              margin: 10px 0px;
+              color: $fontColor;
+              font-weight: 300;
+              img {
+                width: 30px;
+              }
+            }
+            .flightInfo {
+              display: inline-flex;
+              width: 100%;
+              align-items: center;
+              img {
+                width: 22px;
+                margin-right: 10px;
+              }
+              .bordered {
+                width: 85px;
+                float: right;
+                border: 1px solid $tabborder;
+                padding: 5px;
+                line-height: 14px;
+                small {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+        .totalAmount {
+       //   margin-top: 10px;
+          padding: 5px;
+          margin-bottom: 0px;
+          li {
+            text-align: left;
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+            span {
+              font-size: 13px;
+              b {
+                display: block;
+              }
+            }
+            &:last-child {
+              border-top: 1px dashed $tabborder;
+              span {
+                font-size: 15px;
+                font-weight: 300;
+                color: $fontColor;
+              }
+            }
+          }
+        }
+        h3 {
+          font-size: 16px;
+          font-weight: 300;
+          color: #464646;
+          img {
+            width: 18px;
+            vertical-align: top;
+            margin-right: 5px;
+          }
+        }
+        .commonPickDrop {
+          text-align: center;
+          list-style: none;
+          padding: 0;
+          margin-bottom: 10px;
+          li {
+            width: 100px;
+            display: inline-table;
+            vertical-align: top;
+            &:nth-child(1) {
+              width: 40px;
+              text-align: left;
+              margin-top: 15px;
+            }
+            &:nth-child(3) {
+              width: 40px;
+              text-align: center;
+              margin-top: 15px;
+              .time {
+                width: 30px;
+              }
+            }
+            .bordered {
+              border: 1px solid $tabborder;
+              line-height: 20px;
+              padding: 5px;
+              width: 100%;
+              display: grid;
+              text-align: center;
+              small {
+                font-size: 12px;
+              }
+            }
+
+            .commonTime {
+              width: 100%;
+              display: block;
+              font-size: 11px;
+              font-weight: 500;
+              text-align: center;
+              margin-top: 5px;
+              img {
+                width: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .wishListNameYour {
+      width: 100%;
+      display: inline-flex;
+      float: left;
+      background: $secondryColor;
+      padding: 5px;
+      border-radius: 4px;
+      margin: 15px 0px;
+      align-items: center;
+      justify-content: space-between;
+      h5 {
+        color: #fff;
+        float: left;
+        margin: 0;
+        font-weight: normal;
+        font-size: 18px;
+        margin-left: 10px;
+      }
+      .priceRate {
+        width: 125px;
+        float: right;
+        background: #fff;
+        padding: 5px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        input {
+          width: 85%;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+    .wishListTotalAmount {
+      width: 100%;
+      float: left;
+      padding: 5px 0px;
+      border-top: 1px solid $tabborder;
+      border-bottom: 1px solid $tabborder;
+      margin-bottom: 15px;
+      h2 {
+        font-family: "BebasNeue";
+        font-weight: 300;
+        text-align: right;
+        font-size: 40px;
+        color: $fontColor;
+      }
+    }
+    .wishListBtnGroup {
+      width: 100%;
+      float: left;
+      text-align: center;
+      .searchBtn {
+        @include respond-to(mobile-screens) {
+          font-size: 3vw;
+        }
+        @include respond-to(tab-screens) {
+          font-size: 2vw;
+        }
+
+        @include respond-to(xstab-screens) {
+          font-size: 2vw;
+        }
+        font-size: 1vw;
+        color: $secondryColor;
+        padding: 8px 13px;
+        &.book {
+          width: fit-content;
+          background: $secondryColor;
+          color: $whiteColor;
+          margin: 4px;
+        }
+      }
+    }
+  }
+}
+
+.paymentError {
+  text-align: center;
+  span {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    display: block;
+    i {
+      font-size: 60px;
+      color: #ef5555;
+    }
+  }
+  h4 {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 300;
+    color: $fontColor;
+  }
+  p {
+    font-size: 14px;
+    text-align: center;
+    color: $fontColor;
+  }
+  .goBack {
+    background: #ef5555;
+    color: #fff;
+    padding: 5px 25px;
+    margin: auto;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+  }
+}
+
+button[disabled] {
+  cursor: not-allowed;
+}
+
+.subscription {
+  background-color: linen;
+
+  position: inherit;
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+  @include respond-to(mobToLap-screens) {
+    overflow-y: scroll;
+    padding: 30px 0px;
+  }
+  .subscripContent {
+    width: 900px;
+    min-height: 300px;
+    margin: 60px;
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+      padding: 20px;
+    }
+    .subscripTitle {
+      width: 100%;
+      display: block;
+      position: relative;
+      h2 {
+        border: 1px solid #0e0c0c;
+        padding: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #080000;
+        font-weight: 300;
+        font-size: 24px;
+      }
+      .closeSubscrip {
+        position: absolute;
+        top: -25px;
+        right: 0;
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+        padding: 0;
+        color: #000;
+        text-align: center;
+      }
+    }
+    .subscripBody {
+      width: 100%;
+      margin-top: 20px;
+
+      .subscripPlan {
+        width: 48%;
+        background: rgba(254, 198, 55, 0.2);
+        padding: 10px;
+        border: 1px solid #ffc107;
+        @include respond-to(mobToLap-screens) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .subscripPlanTitle {
+          width: 50%;
+          margin: auto;
+          h5 {
+            font-family: "BebasNeue";
+            color: #040000;
+            font-size: 30px;
+            text-align: center;
+            font-weight: 300;
+            margin-bottom: 0px;
+          }
+          h2 {
+            color: #350303;
+            border-top: 1px dashed #131111;
+            font-size: 38px;
+            text-align: center;
+          }
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          height: 325px;
+          overflow: auto;
+          li {
+            list-style: none;
+            display: block;
+            padding: 4px;
+            border-bottom: 1px dashed #000000;
+            &:last-child {
+              border: none;
+            }
+            .fa-check-circle {
+              color: #84e689;
+            }
+            .fa-times-circle {
+              color: #ff6f43;
+            }
+            p {
+              width: 80%;
+              display: inline-block;
+              margin-left: 10px;
+              color: #795548;
+              margin-bottom: 0;
+              font-size: 14px;
+            }
+          }
+        }
+        .currentSubBtn {
+          width: 100%;
+          padding: 7px;
+          background: #fec237de;
+          border: 1px solid #fec237de;
+          border-radius: 4px;
+          margin-top: 5px;
+          text-transform: uppercase;
+          color: $fontColor;
+          font-weight: 300;
+          // cursor:pointer;
+        }
+      }
+      .subscripPlanTwo {
+        background: rgba(254, 198, 55, 0.2);
+        border: 1px solid #fec637;
+        .subscripPlanTitle {
+          width: 65%;
+          margin: auto;
+        }
+        ul {
+          li {
+            border-bottom: 1px dashed #fec637;
+          }
+        }
+        .RegisSubBtn {
+          width: 100%;
+          padding: 7px;
+          background: $primaryColor;
+          border: 1px solid $primaryColor;
+          border-radius: 4px;
+          margin-top: 5px;
+          text-transform: uppercase;
+          color: $fontColor;
+          font-weight: 300;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+//Flight search scss added
+
+.flightSearch {
+  .seleTrip {
+    width: 165px;
+    border: 1px solid $tabborder;
+    padding: 2px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    @include respond-to(desk-screens) {
+      width: 135px;
+    }
+    @include respond-to(lap-screens) {
+      width: 135px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    select {
+      width: 100%;
+      height: 37px;
+      border: none;
+      padding: 5px;
+      @extend %selectArrowImage;
+      @include respond-to(mobile-screens) {
+        font-size: 14px;
+      }
+    }
+  }
+  .selePassanger {
+    width: 166px;
+    border: 1px solid $tabborder;
+    height: 43px;
+    padding: 2px;
+    position: relative;
+    @include respond-to(desk-screens) {
+      width: 135px;
+    }
+    @include respond-to(lap-screens) {
+      width: 135px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    @include respond-to(mobile-screens) {
+      font-size: 14px;
+    }
+    .NoOfText {
+      width: 100%;
+      display: block;
+      position: relative;
+      padding: 7px;
+      cursor: pointer;
+      &:after {
+        content: "";
+        position: absolute;
+        right: 5px;
+        top: 41%;
+        background: url("../images/selarrow.png");
+        width: 11px;
+        height: 7px;
+      }
+    }
+    .typeOfPassanger {
+      position: absolute;
+      background: #fff;
+      left: 0;
+      top: 43px;
+      border: 1px solid $tabborder;
+      padding: 5px;
+      width: 100%;
+      z-index: 99;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 5px 0px;
+          span {
+            display: inline-flex;
+            vertical-align: middle;
+            font-size: 14px;
+            cursor: pointer;
+            &:nth-child(2) {
+              text-align: center;
+              display: inline-block;
+            }
+            img {
+              width: 17px;
+              height: 17px;
+            }
+            small {
+              width: 100%;
+              display: block;
+            }
+          }
+        }
+      }
+      .doneBtn {
+        width: 100%;
+        background: #fec637;
+        border: 1px solid #fec637;
+        margin: 5px 0px;
+        font-size: 14px;
+        padding: 4px;
+        font-weight: 300;
+      }
+    }
+  }
+  .selectTakeOff {
+    width: 252px;
+    border: 1px solid $tabborder;
+    padding: 2px 5px;
+    margin-right: 0.5rem;
+    @include respond-to(desk-screens) {
+      width: 206px;
+    }
+    @include respond-to(lap-screens) {
+      width: 206px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    img {
+      width: 33px;
+      display: inline-table;
+      vertical-align: middle;
+      @include respond-to(desk-screens) {
+        width: 23px;
+      }
+      @include respond-to(lap-screens) {
+        width: 23px;
+      }
+      @include respond-to(mobile-screens) {
+        width: 23px;
+      }
+    }
+    input {
+      border: none;
+      outline: none;
+      width: 85%;
+      padding: 5px;
+      height: 37px;
+      text-indent: 5px;
+      display: inline-table;
+      vertical-align: middle;
+      @include respond-to(lap-screens) {
+        width: 80%;
+      }
+      @include respond-to(mobile-screens) {
+        font-size: 14px;
+      }
+    }
+  }
+  .seleTravelDate {
+    width: 299px;
+    border: 1px solid $tabborder;
+    padding: 2px 5px;
+    margin-bottom: 0.5rem;
+    @include respond-to(desk-screens) {
+      width: 220px;
+    }
+    @include respond-to(lap-screens) {
+      width: 229px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    &.addFlightDates {
+      width: 265px;
+      display: inline-block;
+      @include respond-to(desk-screens) {
+        width: 200px;
+      }
+      @include respond-to(lap-screens) {
+        width: 200px;
+      }
+      @include respond-to(mobToLap-screens) {
+        width: 90%;
+        margin-bottom: 0.5rem;
+      }
+    }
+    img {
+      width: 25px;
+      display: inline-table;
+      vertical-align: middle;
+      @include respond-to(desk-screens) {
+        width: 20px;
+      }
+      @include respond-to(lap-screens) {
+        width: 20px;
+      }
+      @include respond-to(mobile-screens) {
+        width: 20px;
+      }
+    }
+    input {
+      border: none;
+      outline: none;
+      width: 85%;
+      padding: 5px;
+      height: 37px;
+      text-indent: 5px;
+      display: inline-table;
+      vertical-align: middle;
+      @include respond-to(mobile-screens) {
+        font-size: 14px;
+      }
+    }
+    &.roundTripDate {
+      input {
+        width: 45%;
+        @include respond-to(mobile-screens) {
+          font-size: 14px;
+        }
+        &.borderRig {
+          border-right: 1px solid $tabborder;
+        }
+      }
+    }
+  }
+  .closeFlight {
+    width: 28px;
+    display: inline-block;
+    margin-left: 5px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    @include respond-to(desk-screens) {
+      width: 15px;
+    }
+    @include respond-to(lap-screens) {
+      width: 24px;
+    }
+    i {
+      color: $fontColor;
+      font-size: 20px;
+    }
+  }
+}
+
+.addAnotherBtn {
+  float: left;
+  text-align: left;
+  margin-top: 20px;
+  button {
+    background: #fff;
+    border: 1px solid $secondryColor;
+    color: $secondryColor;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+    &:disabled {
+      background: #ddd;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// flight  styless
+.flightCard {
+  .departureFlights {
+    margin-bottom: 15px;
+  }
+  .returnFlights {
+    padding-top: 15px;
+    border-top: 1px dashed $tabborder;
+  }
+  .resColumn {
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+  }
+  .airlineImages {
+    width: 60px;
+    height: 60px;
+    margin-right: 0.5rem;
+    @include respond-to(desk-screens) {
+      width: 75px;
+    }
+    @include respond-to(lap-screens) {
+      width: 75px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+      margin-right: 0rem;
+      margin-bottom: 0.5rem;
+      height: 80px;
+    }
+    img {
+      width: 100%;
+      height: 60px;
+      object-fit: contain;
+      @include respond-to(mobToLap-screens) {
+        width: 100%;
+        height: 80px;
+      }
+    }
+  }
+  .travellingTime {
+    width: 330px;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include respond-to(desk-screens) {
+      width: 420px;
+    }
+    @include respond-to(lap-screens) {
+      width: 420px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+      margin-right: 0rem;
+      margin-bottom: 0.5rem;
+    }
+    .travelTimeAndPlace {
+      text-align: center;
+      margin-right: 5px;
+      width: 120px;
+      align-self: start;
+      @include respond-to(desk-screens) {
+        align-self: center;
+      }
+      @include respond-to(lap-screens) {
+        align-self: center;
+      }
+      @include respond-to(mobToLap-screens) {
+        width: 20%;
+      }
+      h5 {
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 0;
+        color: $fontColor;
+        @include respond-to(mobile-screens) {
+          font-size: 15px;
+        }
+      }
+      p {
+        font-size: 12px;
+        margin: 0;
+        color: $fontColor;
+        line-height: 15px;
+        @include respond-to(mobile-screens) {
+          font-size: 11px;
+        }
+      }
+    }
+    .travelDistanceShow {
+      width: 250px;
+      margin-right: 5px;
+      height: 55px;
+      @include respond-to(mobToLap-screens) {
+        width: 60%;
+      }
+      .totalHoursdiv {
+        font-size: 12px;
+        width: 90%;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 5px;
+          left: 0;
+          border-top: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+          border-right: 4px solid #ccc;
+          width: 0;
+          height: 0;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 5px;
+          right: 0;
+          border-top: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+          border-left: 4px solid #ccc;
+          width: 0;
+          height: 0;
+        }
+        .totalHour {
+          background: #fff;
+          position: relative;
+          z-index: 99;
+          padding: 0px 5px;
+        }
+        .borderLine {
+          &::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            right: 0;
+            border-top: 2px solid #ccc;
+            width: 100%;
+            z-index: 1;
+          }
+        }
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 9;
+        li {
+          position: relative;
+          span {
+            width: 12px;
+            height: 12px;
+            background: #a1a1a1;
+            border-radius: 50%;
+            border: 1px solid #6a6a6a;
+            float: left;
+            &.moreStop {
+              background: #fff;
+              z-index: 9;
+              position: relative;
+              width: 10px;
+              height: 10px;
+              top: 2px;
+            }
+          }
+          p {
+            font-size: 10px;
+            position: absolute;
+            top: 15px;
+            margin: auto;
+            line-height: 12px;
+            text-align: center;
+            width: 50px;
+            left: -20px;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 6px;
+          right: 0;
+          border-top: 1px solid #a1a1a1;
+          width: 100%;
+          z-index: 1;
+        }
+      }
+      .nonStopText {
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+  }
+  .flightRate {
+    width: 115px;
+    text-align: right;
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    h3 {
+      font-size: 26px;
+      text-align: right;
+      font-weight: 300;
+      color: $fontColor;
+      @include respond-to(mobToLap-screens) {
+        float: left;
+      }
+      @include respond-to(mobile-screens) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .flightSelectbtn {
+      width: 90%;
+      @include respond-to(mobToLap-screens) {
+        width: 200px;
+        float: right;
+      }
+      @include respond-to(mobile-screens) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.flightConfirm {
+  .flightConfirmLeft {
+    width: 48%;
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    h4 {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 100;
+      color: $fontColor;
+      @include respond-to(mobile-screens) {
+        font-size: 16px;
+      }
+    }
+    p {
+      font-size: 14px;
+      margin: auto;
+      text-align: center;
+      color: $fontColor;
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+      }
+    }
+    .FlightStatus {
+      list-style: none;
+      padding-left: 15px;
+      margin: 5px auto;
+      @include respond-to(mobToLap-screens) {
+        padding-left: 0px;
+        text-align: center;
+      }
+      @include respond-to(mobile-screens) {
+        padding-left: 0px;
+        text-align: center;
+      }
+      li {
+        display: inline-table;
+        vertical-align: middle;
+        width: 120px;
+        @include respond-to(mobile-screens) {
+          width: 100px;
+        }
+        &:nth-child(2) {
+          width: 50px;
+          text-align: center;
+          @include respond-to(mobile-screens) {
+            width: 28px;
+          }
+          img {
+            margin-top: 35px;
+            vertical-align: bottom;
+            @include respond-to(mobile-screens) {
+              width: 15px;
+            }
+          }
+        }
+        .flightDet {
+          width: 100%;
+          display: block;
+          margin: 10px 0px;
+          color: $fontColor;
+          font-weight: 300;
+          @include respond-to(mobile-screens) {
+            font-size: 15px;
+          }
+          img {
+            width: 30px;
+            @include respond-to(mobile-screens) {
+              width: 25px;
+            }
+          }
+        }
+        .flightInfo {
+          display: inline-flex;
+          width: 100%;
+          align-items: center;
+          img {
+            width: 22px;
+            margin-right: 10px;
+          }
+          .bordered {
+            width: 85px;
+            float: right;
+            border: 1px solid $tabborder;
+            padding: 5px;
+            line-height: 14px;
+            small {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    h6 {
+      font-size: 14px;
+      margin-top: 15px;
+      color: $fontColor;
+      font-weight: 300;
+      border-bottom: 1px dashed $tabborder;
+      padding-bottom: 15px;
+    }
+    .baggageDivShow {
+      width: 100%;
+      margin-top: 10px;
+      p {
+        font-size: 13px;
+        text-align: left;
+        color: $fontColor;
+        margin-bottom: 5px;
+      }
+      table {
+        width: 80%;
+        margin: auto;
+        tbody {
+          tr {
+            td {
+              font-size: 13px;
+              color: $fontColor;
+              a {
+                color: #49a5d8;
+                img {
+                  width: 12px;
+                  margin-left: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .flightConfirmRight {
+    width: 48%;
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    .totalAmount {
+      border: 1px solid $tabborder;
+      padding: 6px;
+      margin-bottom: 0px;
+      @include respond-to(mobToLap-screens) {
+        margin-top: 10px;
+      }
+      li {
+        text-align: left;
+        width: 100%;
+        padding: 5px;
+        display: inline-flex;
+        justify-content: space-between;
+        span {
+          font-size: 13px;
+          b {
+            display: block;
+          }
+        }
+        &:last-child {
+          border-top: 1px dashed $tabborder;
+          span {
+            font-size: 15px;
+            font-weight: 300;
+            color: $fontColor;
+          }
+        }
+      }
+    }
+
+    h4 {
+      margin-top: 15px;
+      color: #464646;
+      font-weight: 300;
+      border-bottom: 1px dashed #6a6a6a;
+      padding-bottom: 10px;
+      font-size: 18px;
+      @include respond-to(mobile-screens) {
+        font-size: 15px;
+      }
+      img {
+        width: 45px;
+        @include respond-to(mobile-screens) {
+          font-size: 33px;
+        }
+      }
+    }
+    p {
+      font-size: 13px;
+      color: $fontColor;
+    }
+    .flightInformDet {
+      h6 {
+        font-size: 14px;
+        font-weight: 300;
+        color: $fontColor;
+      }
+      p {
+        font-size: 13px;
+        color: $fontColor;
+      }
+    }
+  }
+}
+
+.subscriptCardShow {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  border: 1px solid #ddd;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  @include respond-to(all-screens) {
+    flex-wrap: wrap;
+  }
+  .cardinfoAlready {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    @include respond-to(all-screens) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    input[type="radio"] {
+      &:checked {
+        position: absolute;
+        left: -9999px;
+        + {
+          label {
+            position: relative;
+            padding-left: 15px;
+            cursor: pointer;
+            line-height: 20px;
+            top: 3px;
+            display: inline-block;
+            color: #666;
+            &:before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 18px;
+              height: 18px;
+              border: 1px solid $tabborder;
+              border-radius: 100%;
+              background: $whiteColor;
+            }
+            &:after {
+              content: "";
+              width: 12px;
+              height: 12px;
+              background: $primaryColor;
+              position: absolute;
+              top: 3px;
+              left: 3px;
+              border-radius: 100%;
+              -webkit-transition: all 0.2s ease;
+              transition: all 0.2s ease;
+              opacity: 1;
+              -webkit-transform: scale(1);
+              transform: scale(1);
+            }
+          }
+        }
+      }
+      &:not(:checked) {
+        position: absolute;
+        left: -9999px;
+        + {
+          label {
+            position: relative;
+            padding-left: 15px;
+            cursor: pointer;
+            line-height: 20px;
+            top: 3px;
+            display: inline-block;
+            color: #666;
+            &:before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 18px;
+              height: 18px;
+              border: 1px solid $tabborder;
+              border-radius: 100%;
+              background: #fff;
+            }
+            &:after {
+              content: "";
+              width: 12px;
+              height: 12px;
+              background: $primaryColor;
+              position: absolute;
+              top: 4px;
+              left: 4px;
+              border-radius: 100%;
+              -webkit-transition: all 0.2s ease;
+              transition: all 0.2s ease;
+              opacity: 0;
+              -webkit-transform: scale(0);
+              transform: scale(0);
+            }
+          }
+        }
+      }
+    }
+
+    .visaCard {
+      background: url(../images/paymentCard1.png) 10% 45%;
+      width: 42px;
+    }
+    .masterCard {
+      background: url(../images/paymentCard1.png) 32% 45%;
+      width: 42px;
+    }
+    .discoverCard {
+      background: url(../images/paymentCard1.png) 54% 45%;
+      width: 42px;
+    }
+    .expressCard {
+      background: url(../images/paymentCard1.png) 76% 45%;
+      width: 42px;
+    }
+    .clubCard {
+      background: url(../images/paymentCard1.png) 99% 45%;
+      width: 42px;
+    }
+    h6 {
+      margin-bottom: 0px;
+      margin-top: 5px;
+      font-weight: 300;
+    }
+  }
+  a {
+    font-size: 14px;
+    cursor: pointer;
+    @include respond-to(all-screens) {
+      width: 100%;
+      text-align: right;
+      font-size: 13px;
+    }
+  }
+}
+
+.subscripAutoRenewal {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+  margin-top: 10px;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    color: $fontColor;
+    font-weight: normal;
+    font-size: 13px;
+    p {
+      margin-top: 2px;
+    }
+  }
+
+  // Box.
+  & + label:before {
+    content: "";
+    margin-right: 4px;
+    margin-top: 2px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 1px solid $secondryColor;
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: $primaryColor;
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: $primaryColor;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 9px;
+    background: $secondryColor;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 $secondryColor, 4px 0 0 $secondryColor,
+      4px -2px 0 $secondryColor, 4px -4px 0 $secondryColor,
+      4px -6px 0 $secondryColor, 4px -8px 0 $secondryColor;
+    transform: rotate(45deg);
+  }
+}
+
+.currencyFlag {
+  width: 20px;
+  height: 15px;
+  box-shadow: 0px 0px 1px 0px #888;
+  background-image: url("../images/currencyFlag.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -3px;
+  top: 5px;
+  &.curInd {
+    background-position: -3px -3px;
+    height: 14px;
+  }
+  &.curAus {
+    background-position: -28px -3px;
+    height: 14px;
+  }
+  &.curBah {
+    background-position: -51px -3px;
+    height: 14px;
+  }
+  &.curQat {
+    background-position: -75px -3px;
+    height: 14px;
+  }
+  &.curTha {
+    background-position: -112px -3px;
+    height: 14px;
+  }
+  &.curCan {
+    background-position: -139px -3px;
+    height: 14px;
+  }
+  &.curEur {
+    background-position: -166px -3px;
+    height: 14px;
+  }
+  &.curSin {
+    background-position: -190px -3px;
+    height: 14px;
+  }
+  &.curHKD {
+    background-position: -216px -3px;
+    height: 14px;
+  }
+  &.curUae {
+    background-position: -242px -3px;
+    height: 14px;
+  }
+  &.curIno {
+    background-position: -271px -3px;
+    height: 14px;
+  }
+  &.curJap {
+    background-position: -295px -3px;
+    height: 14px;
+  }
+  &.curSri {
+    background-position: -321px -3px;
+    height: 14px;
+  }
+  &.curUni {
+    background-position: -347px -3px;
+    height: 14px;
+  }
+}
+
+//Error Page Designs
+.errorPageBg {
+  background-image: url(../images/slider1.png);
+  background-size: cover;
+  object-fit: contain;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+  }
+  .errorPageContent {
+    width: 550px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    @include respond-to(mobile-screens) {
+      width: 100%;
+      padding: 10px;
+    }
+    h1 {
+      font-size: 200px;
+      color: #8e4a88;
+      font-family: "Opensan";
+      font-weight: 300;
+      position: relative;
+      margin-bottom: 0;
+      @include respond-to(mobile-screens) {
+        font-size: 100px;
+      }
+      .errorCodeLogo {
+        position: absolute;
+        bottom: 0px;
+        width: 50px;
+        height: 70px;
+        background: url("../images/erroePageLogo.png") no-repeat;
+        margin: auto;
+        left: 45.5%;
+        bottom: 25%;
+        /* right: auto; */
+        z-index: 1;
+
+        @include respond-to(mobile-screens) {
+          background: url("../images/favIconXeni.png") no-repeat;
+          width: 32px;
+          height: 32px;
+          left: 45.2%;
+          bottom: 28%;
+        }
+        @media screen and (min-width: 380px) and (max-width: 480px) {
+          left: 46.2%;
+        }
+      }
+    }
+    h5 {
+      font-size: 22px;
+      font-weight: normal;
+      color: #555555;
+      margin-bottom: 25px;
+      @include respond-to(mobile-screens) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .errorPageBtn {
+      background: $primaryColor;
+      color: $fontColor;
+      border: 1px solid $secondryColor;
+      padding: 6px 20px;
+      outline: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 300;
+      margin-top: 20px;
+      text-decoration: none;
+      @include respond-to(mobile-screens) {
+        font-size: 16px;
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+.react-datepicker {
+  .react-datepicker__month-container {
+    .react-datepicker__header {
+      background: #ffffff;
+      border-bottom: none;
+      .react-datepicker__header__dropdown {
+        .react-datepicker__month-select {
+          border: none;
+          width: 90px;
+        }
+        .react-datepicker__year-select {
+          border: none;
+          width: 65px;
+        }
+      }
+      .react-datepicker__day-names {
+        .react-datepicker__day-name {
+          font-weight: bold;
+          color: #464646;
+        }
+      }
+    }
+    .react-datepicker__month {
+      .react-datepicker__week {
+        .react-datepicker__day {
+          &:hover {
+            background: #fec637;
+            border-radius: 0px;
+          }
+        }
+        .react-datepicker__day--keyboard-selected,
+        .react-datepicker__month-text--keyboard-selected {
+          background: #fec637;
+          border-radius: 0px;
+          color: #464646;
+        }
+        .react-datepicker__day--selected,
+        .react-datepicker__day--in-selecting-range,
+        .react-datepicker__day--in-range,
+        .react-datepicker__month-text--selected,
+        .react-datepicker__month-text--in-selecting-range,
+        .react-datepicker__month-text--in-range {
+          background: #fec637;
+          border-radius: 0px;
+          color: #464646;
+        }
+        .react-datepicker__day--outside-month {
+          color: #ddd;
+        }
+      }
+    }
+  }
+}
+
+.respoView {
+  @include respond-to(desk-screens) {
+    position: absolute;
+    top: 97px;
+    left: 17px;
+  }
+  @include respond-to(lap-screens) {
+    position: absolute;
+    top: 97px;
+    left: 17px;
+  }
+}
+
+.pickuplocation {
+  p {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+}
+
+.scrollTopBtn {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  bottom: 25px;
+  right: 25px;
+  background: $primaryColor;
+  color: $secondryColor;
+  z-index: 9;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 2px 0px #a5a5a5;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: none;
+  @include respond-to(mobile-screens) {
+    width: 30px;
+    height: 30px;
+    padding: 4px 9px;
+    font-size: 15px;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+.carousel {
+  .carousel-status {
+    top: unset !important;
+    bottom: 0;
+    font-size: 14px !important;
+    margin-bottom: 0;
+  }
+  &.slider-wrapper {
+    height: 400px;
+    @include respond-to(mobile-screens) {
+      height: 200px;
+    }
+  }
+  .slider {
+    width: 100% !important;
+    .slide {
+      background: transparent;
+      img {
+        height: 400px;
+        object-fit: cover;
+        @include respond-to(mobile-screens) {
+          height: 200px;
+        }
+      }
+    }
+  }
+  .thumbs-wrapper {
+    margin: 15px 10px;
+    .thumbs {
+      .thumb {
+        display: inline-block !important;
+        &.selected {
+          border-color: $secondryColor;
+        }
+        &:hover {
+          border-color: $secondryColor;
+        }
+        img {
+          height: 50px;
+          object-fit: contain;
+          width: 100%;
+          @include respond-to(mobile-screens) {
+            height: 50px;
+          }
+        }
+      }
+    }
+    .control-arrow {
+      top: 5px;
+      height: 100%;
+      &.control-next:hover,
+      &.control-prev:hover {
+        background: #00000094;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.itineraryError {
+  width: 100%;
+  display: block;
+  background: #f12e2e;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  font-size: 13px;
+}
+
+.facebookbtn {
+  background-color: rgb(255, 255, 255);
+  display: inline-flex;
+  align-items: center;
+  // color: rgba(0, 0, 0, 0.54);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.24) 0px 0px 1px 0px;
+  padding: 10px 10px 10px 0px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Roboto, sans-serif;
+  text-transform: capitalize;
+  margin-right: 10px !important;
+  cursor: pointer;
+  .faceiconSize {
+    font-size: 30px;
+    color: #3b5998;
+    margin-right: 10px;
+  }
+}
+
+.css-15k3avv {
+  z-index: 9999 !important;
+}
+
+.css-2o5izw {
+  box-shadow: 0 0 0 1px $tabborder !important;
+  border-radius: 0px !important;
+}
+
+.css-2o5izw:hover {
+  border-color: #6a6a6a !important;
+}
+
+.css-vj8t7z {
+  border-radius: 0px !important;
+  border-color: $tabborder !important;
+}
+
+@media only screen and (max-width: 1199px) {
+  .fixToBottom {
+    position: fixed !important;
+    left: 0px;
+    bottom: 0px;
+    z-index: 99999;
+    background: #916800;
+    padding: 5px 15px;
+    height: 45px;
+  }
+  .fixToTop.showFilterBg {
+    position: fixed !important;
+    left: 0px;
+    top: 0px;
+    z-index: 99999;
+    background: #000;
+  }
+  .fixToTop.showFilterBg .respDeskShow {
+    height: 85vh;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .showMapPopup .fixToBottom {
+    height: auto !important;
+    padding: 12px 20px;
+  }
+}
+
+.mapLargeScreen {
+  .fixToBottom {
+    position: fixed !important;
+    left: 0px;
+    bottom: 0px;
+    z-index: 99999;
+    background: #916800;
+    padding: 5px 15px;
+    height: 60px;
+    width: 50%;
+  }
+  .fixToTop.showFilterBg {
+    position: fixed !important;
+    left: 0px;
+    top: 0px;
+    width: 850px;
+    height: 100%;
+    z-index: 99999;
+    background: #000;
+  }
+  .fixToTop.showFilterBg .respDeskShow {
+    height: 85vh;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .showMapPopup .fixToBottom {
+    height: auto !important;
+    padding: 12px 20px;
+  }
+
+  .filterTitle {
+    padding-bottom: 0px;
+    display: block;
+    h2 {
+      font-size: 26px;
+      display: block;
+      border-bottom: none;
+      margin: 0px;
+    }
+    .downArrowImg {
+      float: right;
+      margin-top: 15px;
+      display: block;
+    }
+  }
+
+  h2 {
+    display: none;
+    border-bottom: none;
+  }
+}
+
+.showMapPopup {
+  overflow-y: hidden;
+}
+
+.showMapPopup .filterBg {
+  width: 100%;
+}
+
+.showMapPopup .fixToBottom {
+  height: 70vh;
+  overflow-y: scroll;
+  padding: 0px 20px;
+}
+
+.mapProductListing {
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+.pad0 {
+  padding: 0px;
+}
+
+.mapProductListing .d-flex {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
+.mapProductListing .owl-carousel,
+.mapProductListing .owl-carousel .item img {
+  width: 100px !important;
+  height: 100px;
+  margin-right: 15px;
+}
+
+.productMapMainDiv {
+  width: calc(100% - 115px);
+}
+
+.mapProductListing .sectionCard {
+  padding: 8px;
+}
+
+.mapProductListing .sectionCard .detailsBasic h4 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.mapProductListing .sectionCard .listTitle {
+  padding-bottom: 15px;
+}
+
+.mapProductListing .sectionCard .priceDiv {
+  position: initial;
+  background: transparent;
+}
+
+.mapDetails .divSlide {
+  cursor: pointer;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  font-size: 10px;
+  color: #383838;
+  top: 15px;
+  left: 295px;
+  z-index: 1002;
+  font-family: "booking-iconset";
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 0 2px 2px 0;
+  background: #fff;
+  -webkit-transition: -webkit-transform ease 0.2s;
+  transition: transform ease 0.2s;
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.mapDetails .divSlide.open {
+  left: 616px;
+}
+
+.mapDetails .divSlide.open:after {
+  content: "";
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  left: 43%;
+  top: 43%;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transition: ease transform 0.4s 0.2s;
+}
+
+.mapDetails .divSlide:after {
+  content: "";
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  left: 36%;
+  top: 43%;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transition: ease transform 0.4s 0.2s;
+}
+
+.showMapPopup .modal-dialog {
+  position: fixed;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 90%;
+  z-index: 99999999999;
+}
+
+.mapDetails .divSlide.open {
+  left: 616px;
+}
+
+.mapDetails .divSlide.open:after {
+  content: "";
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  left: 43%;
+  top: 43%;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transition: ease transform 0.4s 0.2s;
+}
+
+.mapDetails .divSlide:after {
+  content: "";
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  left: 36%;
+  top: 43%;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transition: ease transform 0.4s 0.2s;
+}
+
+.showMapPopup .modal-dialog {
+  position: fixed;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 90%;
+  z-index: 99999999999;
+}
+
+.showMapPopup {
+  overflow-y: hidden;
+}
+
+.showMapPopup .filterBg {
+  width: 100%;
+}
+
+.showMapPopup .fixToBottom {
+  height: 70vh;
+  overflow-y: scroll;
+  padding: 0px 20px;
+}
+
+.mapProductListing {
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+.pad0 {
+  padding: 0px;
+}
+
+.mapProductListing .d-flex {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
+.mapProductListing .owl-carousel,
+.mapProductListing .owl-carousel .item img {
+  width: 100px !important;
+  height: 100px;
+  margin-right: 15px;
+}
+
+.productMapMainDiv {
+  width: calc(100% - 115px);
+}
+
+.mapProductListing .sectionCard {
+  padding: 8px;
+}
+
+.mapProductListing .sectionCard .detailsBasic h4 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.mapProductListing .sectionCard .listTitle {
+  padding-bottom: 15px;
+}
+
+.mapProductListing .sectionCard .priceDiv {
+  position: initial;
+  background: transparent;
+}
+
+.mapDetails .divSlide {
+  cursor: pointer;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  font-size: 10px;
+  color: #383838;
+  top: 15px;
+  left: 295px;
+  z-index: 1002;
+  font-family: "booking-iconset";
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 0 2px 2px 0;
+  background: #fff;
+  -webkit-transition: -webkit-transform ease 0.2s;
+  transition: transform ease 0.2s;
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.mapDetails .divSlide.open {
+  left: 616px;
+}
+
+.mapDetails .divSlide.open:after {
+  content: "";
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  left: 43%;
+  top: 43%;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transition: ease transform 0.4s 0.2s;
+}
+
+.mapDetails .divSlide:after {
+  content: "";
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  left: 36%;
+  top: 43%;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transition: ease transform 0.4s 0.2s;
+}
+
+.showMapPopup .modal-dialog {
+  position: fixed;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 90%;
+  z-index: 99999999999;
+}
+
+.mapDetails .divSlide.open {
+  left: 616px;
+}
+
+.mapDetails .divSlide.open:after {
+  content: "";
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  left: 43%;
+  top: 43%;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transition: ease transform 0.4s 0.2s;
+}
+
+.mapDetails .divSlide:after {
+  content: "";
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  left: 36%;
+  top: 43%;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transition: ease transform 0.4s 0.2s;
+}
+
+.showMapPopup .modal-dialog {
+  position: fixed;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 90%;
+  z-index: 99999999999;
+}
+
+.search-bar-override {
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0.4rem 0.5rem 0.0625rem #dbdbdc;
+  z-index: 2;
+  position: absolute !important;
+  border: 1px solid #278e4a;
+  font-size: 13px;
+}
+
+.list-item-style {
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.list-item-single {
+  padding: 5px;
+}
+
+.list-item-single:hover {
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.transferSearchOption {
+  @include respond-to(desk-screens) {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  @include respond-to(lap-screens) {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .seleLocation {
+    width: 407px;
+    /* height: 40px; */
+    @extend %carSearchBack;
+    @include respond-to(desk-screens) {
+      width: 308px;
+    }
+    @include respond-to(lap-screens) {
+      width: 320px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    input {
+      @extend %carSearchInput;
+    }
+  }
+
+  .seleDate {
+    width: 135px;
+    @include respond-to(desk-screens) {
+      width: 306px;
+    }
+    @include respond-to(lap-screens) {
+      width: 211px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    @extend %DateRangePicker;
+    img {
+      width: 20px;
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+    @extend %carSearchBack;
+    input {
+      width: 80%;
+      text-indent: 13px;
+      @extend %carSearchInput;
+      @include respond-to(desk-screens) {
+        width: 84%;
+      }
+      @include respond-to(lap-screens) {
+        width: 84%;
+      }
+    }
+  }
+  .seleTime {
+    width: 115px;
+    @include respond-to(desk-screens) {
+      width: 317px;
+      margin-right: 0px;
+    }
+    @include respond-to(lap-screens) {
+      width: 211px;
+      margin-right: 7px;
+    }
+
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    img {
+      width: 20px;
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+    @extend %carSearchBack;
+    input {
+      width: 84%;
+      text-indent: 13px;
+
+      @extend %carSearchInput;
+    }
+    select {
+      width: 76%;
+      text-indent: 4px;
+      @extend %carSearchInput;
+      -webkit-appearance: none;
+      // @extend %selectArrowImage;
+    }
+  }
+  .selectPassenger {
+    width: 180px;
+    @include respond-to(desk-screens) {
+      width: 306px;
+      margin-right: 8px;
+    }
+    @include respond-to(lap-screens) {
+      width: 211px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    @extend %carSearchBack;
+    img {
+      width: 20px;
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+    select {
+      width: 100%;
+      text-indent: 7px;
+      @extend %carSearchInput;
+      @extend %selectArrowImage;
+      @include respond-to(mobile-screens) {
+        width: 90%;
+      }
+    }
+  }
+  .selectAnimal {
+    width: 180px;
+    @include respond-to(desk-screens) {
+      width: 317px;
+      margin-right: 0px;
+    }
+    @include respond-to(lap-screens) {
+      width: 320px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    @extend %carSearchBack;
+    img {
+      width: 20px;
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+    select {
+      width: 100%;
+      text-indent: 7px;
+      @extend %carSearchInput;
+      @extend %selectArrowImage;
+      @include respond-to(mobile-screens) {
+        width: 90%;
+      }
+    }
+  }
+  .selectLuggage {
+    width: 180px;
+    @include respond-to(desk-screens) {
+      width: 317px;
+      margin-right: 0px;
+    }
+    @include respond-to(lap-screens) {
+      width: 320px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    @extend %carSearchBack;
+    img {
+      width: 20px;
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+    select {
+      width: 100%;
+      text-indent: 7px;
+      @extend %carSearchInput;
+      @extend %selectArrowImage;
+      @include respond-to(mobile-screens) {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.packageOption {
+  @include respond-to(desk-screens) {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  @include respond-to(lap-screens) {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .seleLocation {
+    width: 400px;
+    @extend %carSearchBack;
+    @include respond-to(desk-screens) {
+      width: 308px;
+    }
+    @include respond-to(lap-screens) {
+      width: 430px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    input {
+      @extend %carSearchInput;
+    }
+  }
+}
+
+.activityOption {
+  @include respond-to(desk-screens) {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  @include respond-to(lap-screens) {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .seleLocation {
+    width: 600px;
+    @extend %carSearchBack;
+    @include respond-to(desk-screens) {
+      width: 308px;
+    }
+    @include respond-to(lap-screens) {
+      width: 430px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    input {
+      @extend %carSearchInput;
+    }
+  }
+
+  .seleDate {
+    width: 210px;
+    @include respond-to(desk-screens) {
+      width: 306px;
+    }
+    @include respond-to(lap-screens) {
+      width: 211px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    @extend %DateRangePicker;
+    img {
+      width: 20px;
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+    @extend %carSearchBack;
+    input {
+      width: 80%;
+      text-indent: 13px;
+      @extend %carSearchInput;
+      @include respond-to(desk-screens) {
+        width: 84%;
+      }
+      @include respond-to(lap-screens) {
+        width: 84%;
+      }
+    }
+  }
+  .seleTime {
+    width: 115px;
+    @include respond-to(desk-screens) {
+      width: 317px;
+      margin-right: 0px;
+    }
+    @include respond-to(lap-screens) {
+      width: 211px;
+      margin-right: 7px;
+    }
+
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    img {
+      width: 20px;
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+    @extend %carSearchBack;
+    input {
+      width: 84%;
+      text-indent: 13px;
+
+      @extend %carSearchInput;
+    }
+    select {
+      width: 76%;
+      text-indent: 4px;
+      @extend %carSearchInput;
+      -webkit-appearance: none;
+      // @extend %selectArrowImage;
+    }
+  }
+  .selectPassenger {
+    width: 180px;
+    @include respond-to(desk-screens) {
+      width: 306px;
+      margin-right: 8px;
+    }
+    @include respond-to(lap-screens) {
+      width: 211px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    @extend %carSearchBack;
+    img {
+      width: 20px;
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+    select {
+      width: 100%;
+      text-indent: 7px;
+      @extend %carSearchInput;
+      @extend %selectArrowImage;
+      @include respond-to(mobile-screens) {
+        width: 90%;
+      }
+    }
+  }
+  .selectAnimal {
+    width: 180px;
+    @include respond-to(desk-screens) {
+      width: 317px;
+      margin-right: 0px;
+    }
+    @include respond-to(lap-screens) {
+      width: 320px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    @extend %carSearchBack;
+    img {
+      width: 20px;
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+    select {
+      width: 100%;
+      text-indent: 7px;
+      @extend %carSearchInput;
+      @extend %selectArrowImage;
+      @include respond-to(mobile-screens) {
+        width: 90%;
+      }
+    }
+  }
+  .selectLuggage {
+    width: 180px;
+    @include respond-to(desk-screens) {
+      width: 317px;
+      margin-right: 0px;
+    }
+    @include respond-to(lap-screens) {
+      width: 320px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    @extend %carSearchBack;
+    img {
+      width: 20px;
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+    select {
+      width: 100%;
+      text-indent: 7px;
+      @extend %carSearchInput;
+      @extend %selectArrowImage;
+      @include respond-to(mobile-screens) {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.selectFlight {
+  width: 180px;
+  @include respond-to(desk-screens) {
+    width: 307px;
+    margin-left: 17px;
+    margin-top: -50px;
+  }
+  @include respond-to(mobToLap-screens) {
+    width: 100%;
+  }
+  @extend %carSearchBack;
+  img {
+    width: 20px;
+    margin-left: 5px;
+    margin-top: -5px;
+  }
+  select {
+    width: 100%;
+    text-indent: 7px;
+    @extend %carSearchInput;
+    @extend %selectArrowImage;
+    @include respond-to(mobile-screens) {
+      width: 90%;
+    }
+  }
+}
+
+.activityCard {
+  .activityImgDiv {
+    width: 180px;
+    display: block;
+    text-align: center;
+    @include respond-to(lap-screens) {
+      width: 195px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    .activityImgWid {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+    }
+
+    .activityLogoWidth {
+      width: 120px;
+      height: 35px;
+      object-fit: contain;
+    }
+  }
+  .activityInfo {
+    h4 {
+      font-size: 17px;
+      font-weight: 200;
+      color: $fontColor;
+      margin-bottom: 0;
+      @include respond-to(mobile-screens) {
+        font-size: 15px;
+      }
+      img {
+        width: 20px;
+      }
+    }
+    .activityCategories {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 5px;
+      @include respond-to(all-screens) {
+        width: 100%;
+      }
+      li {
+        display: inline-block;
+        background: #686868;
+        padding: 2px 5px;
+        font-size: 13px;
+        color: #fff;
+        margin: 0px 4px 0px 0px;
+      }
+    }
+    h6 {
+      font-size: 12px;
+      font-weight: normal;
+      color: $fontColor;
+      img {
+        width: 15px;
+      }
+    }
+    .activityInfraStru {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid $tabborder;
+      width: 180px;
+      @include respond-to(all-screens) {
+        width: 100%;
+      }
+      li {
+        display: inline-block;
+        padding: 6px 12px;
+        @include respond-to(all-screens) {
+          width: 33.3%;
+        }
+        @include respond-to(mobile-screens) {
+          width: 100%;
+        }
+        // @include respond-to(mobile-screens){padding:6px 20px;}
+        color: $fontColor;
+        font-size: 14px;
+        img {
+          width: 15px;
+        }
+        &:nth-child(2) {
+          img {
+            width: 20px;
+          }
+        }
+        &:nth-child(3) {
+          img {
+            width: 12px;
+          }
+        }
+      }
+    }
+    .pickupDropDet {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      @include respond-to(all-screens) {
+        width: 100%;
+      }
+      li {
+        padding: 2px;
+        display: inline-block;
+        width: 45%;
+        vertical-align: top;
+        @include respond-to(all-screens) {
+          width: 49%;
+        }
+        @include respond-to(mobile-screens) {
+          width: 50%;
+        }
+        h6 {
+          font-size: 14px;
+          font-weight: 300;
+          margin: 0px;
+        }
+        p {
+          font-size: 11px;
+          margin: 0px;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .totalAmt {
+    margin: 0;
+    font-size: 13px;
+    text-align: right;
+    @include respond-to(mobToLap-screens) {
+      top: -45px;
+      position: relative;
+      right: 0;
+    }
+    @include respond-to(mobile-screens) {
+      text-align: center;
+      top: 0px;
+    }
+
+    @include respond-to(desk-screens) {
+      position: absolute;
+      top: 100px;
+      right: 10px;
+    }
+  }
+  .selectRoomBtn {
+    padding: 9px 45px;
+  }
+  .rateShowDiv {
+    .priceDiv {
+      @include respond-to(mobToLap-screens) {
+        top: 18px;
+      }
+      @include respond-to(mobile-screens) {
+        top: 0px;
+      }
+    }
+  }
+}
+
+.searchAsText {
+  position: relative;
+  top: 90px;
+  z-index: 9999;
+  left: 10px;
+  font-size: 13px;
+  background-color: #fff;
+  padding: 5px 7px;
+  font-weight: bold;
+ 
+}
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+  .reponseMapView{
+    left: 10px !important;
+    top: 100px !important;
+  }
+  
+  }
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                   supported by Chrome and Opera */
+}
+
+.noselect {
+  @include respond-to(mobile-screens) {
+    display: none;
+  }
+}
+
+.response {
+  height: 100%;
+  @include respond-to(mobile-screens) {
+    position: relative;
+    height: 565px;
+    top: -22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .trans-car-img-right {
+    margin-right: 30px;
+  }
+}
+
+.credit {
+  background: $primaryColor;
+  border: 1px solid $borderColor;
+  margin-top: 8px;
+  font-weight: 300;
+  color: $fontColor;
+  cursor: pointer;
+  width: max-content;
+  padding: 2px;
+  font-size: 13px;
+}
+
+@media (min-width: 960px) {
+  .trans-filter-min-height {
+    min-height: 850px;
+  }
+}
+
+//Displaying count room in hotel search page
+.respone-mobileHotel{
+  margin-Left : 21px !important;
+   margin-Right : 21px !important; 
+   font-Size : 30px !important;
+   .hotelDate{
+    margin-Left:16px !important;
+   }
+@media only screen and (max-width: 480px) and (min-width: 320px) {  
+  margin-left: -20px !important;
+  margin-right: 0px !important;
+  margin-bottom: 10px !important;
+  .hotelDate{
+    margin-left: 20px !important;
+    margin-right: 0px !important;
+  }
+}
+}
+
+.activity-search {
+  border: 1px solid;
+  list-style: none;
+  background-color: #fff !important;
+  position: absolute !important;
+  line-height: 15px;
+  z-index: 1 !important;
+
+  li {
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+
+.add-to-itinerary {
+  display: none;
+  @include respond-to(mobile-screens){
+    display: block;
+    margin-top: 20px;
+    button {
+      width: 100%;
+      padding: 5px 0;
+      background: #fec637;
+      border: 1px solid #916800;
+      font-weight: bold;
+      color: #464646;
+    }
+  }
+}
+
+.carCard .add-to-itinerary {
+  display: none;
+  @include respond-to(mobile-screens){
+    display: block;
+    margin-top: 20px;
+    button {
+      width: 100%;
+      padding: 5px 0;
+      background: #fec637;
+      border: 1px solid #916800;
+      font-weight: bold;
+      color: #464646;
+    }
+  }
+}
+
+.Transfers-Card .add-to-itinerary {
+  display: none;
+  @include respond-to(mobile-screens){
+    display: block;
+    margin-top: 20px;
+    button {
+      width: 100%;
+      padding: 5px 0;
+      background: #fec637;
+      border: 1px solid #916800;
+      font-weight: bold;
+      color: #464646;
+    }
+  }
+}
+
+.Activity-Card .add-to-itinerary {
+  display: none;
+  @include respond-to(mobile-screens){
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    button {
+      width: 100%;
+      padding: 5px 0;
+      background: #fec637;
+      border: 1px solid #916800;
+      font-weight: bold;
+      color: #464646;
+    }
+  }
+}

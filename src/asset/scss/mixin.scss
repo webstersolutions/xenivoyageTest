@@ -1,0 +1,40 @@
+//responsive screen resolution defined
+@mixin respond-to($media) {
+  @if $media == mobile-screens {
+    @media only screen and (min-width: $screen-mobile) and (max-width: $screen-tab + 1) {
+      @content;
+    }
+  } @else if $media == tab-screens {
+    @media only screen and (min-width: $screen-tab + 1) and (max-width: $screen-lap) {
+      @content;
+    }
+  } @else if $media == xstab-screens {
+    @media only screen and (min-width: $screen-tab + 1) and (max-width: $screen-medium) {
+      @content;
+    }
+  } @else if $media == lap-screens {
+    @media only screen and (min-width: $screen-lap + 1) and (max-width: $screen-medium) {
+      @content;
+    }
+  } @else if $media == desk-screens {
+    @media only screen and (min-width: $screen-medium + 1) and (max-width: $screen-large) {
+      @content;
+    }
+  } @else if $media == large-screens {
+    @media only screen and (min-width: $screen-large + 1) and (max-width: $screen-xlarge) {
+      @content;
+    }
+  } @else if $media == all-screens {
+    @media only screen and (min-width: $screen-mobile) and (max-width: $screen-medium) {
+      @content;
+    }
+  } @else if $media == big-screens {
+    @media only screen and (min-width: $screen-xMedium) and (max-width: $screen-exLarge) {
+      @content;
+    }
+  } @else if $media == mobToLap-screens {
+    @media only screen and (min-width: $screen-mobile) and (max-width: $screen-lap) {
+      @content;
+    }
+  }
+}
