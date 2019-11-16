@@ -1,0 +1,6 @@
+--currency bug fixed
+--image thumbnail
+--scroll load more hotels logic applied
+--filter view for mobile
+--hotel detail policies
+--searchby elastic

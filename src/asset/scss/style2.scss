@@ -1,0 +1,3183 @@
+.hotelCard {
+  .totalAmt {
+    margin: 0;
+    font-size: 13px;
+    text-align: right;
+    margin-left: 10px;
+    @include respond-to(mobToLap-screens) {
+      top: -45px;
+      position: relative;
+      right: 0;
+    }
+    @include respond-to(mobile-screens) {
+      text-align: center;
+      top: 0px;
+    }
+
+    @include respond-to(desk-screens) {
+      position: absolute;
+      top: 100px;
+      right: 10px;
+    }
+  }
+}
+
+//confirm your room reservation section
+#RoomResInfo .confirmRoomLeft {
+  width: 50%;
+  margin-right: 10px;
+  padding: 10px;
+  @include respond-to(desk-screens) {
+    width: 100%;
+    margin-right: 0px;
+  }
+  @include respond-to(lap-screens) {
+    width: 100%;
+    margin-right: 0px;
+  }
+  @include respond-to(mobToLap-screens) {
+    width: 100%;
+    margin-right: 0px;
+  }
+  
+  // carousel added in room reservation page start
+  .carousel {
+    ul{
+      margin-top: 0
+    }
+    .carousel-status {
+      top: unset !important;
+      bottom: 0;
+      font-size: 14px !important;
+      margin-bottom: 0;
+    }
+    &.slider-wrapper {
+      height: 400px;
+      @include respond-to(mobile-screens) {
+        height: 200px;
+      }
+    }
+    .slider {
+      width: 100% !important;
+      .slide {
+        background: transparent;
+        img {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+          @include respond-to(mobile-screens) {
+            height: 200px;
+          }
+        }
+      }
+    }
+    .thumbs-wrapper {
+      margin: 15px 10px;
+      .thumbs {
+        .thumb {
+          display: inline-block !important;
+          &.selected {
+            border-color: $secondryColor;
+          }
+          &:hover {
+            border-color: $secondryColor;
+          }
+          img {
+            height: 50px;
+            object-fit: contain;
+            width: 100%;
+            @include respond-to(mobile-screens) {
+              height: 50px;
+            }
+          }
+        }
+      }
+      .control-arrow {
+        top: 5px;
+        height: 100%;
+        &.control-next:hover,
+        &.control-prev:hover {
+          background: #00000094;
+          height: 100%;
+        }
+      }
+    }
+  }
+  // carousel added in room reservation page end
+
+  .owl-carousel {
+    width: 100% !important;
+    @include respond-to(desk-screens) {
+      height: 250px;
+    }
+    .item {
+      img {
+        width: 100% !important;
+        @include respond-to(desk-screens) {
+          height: 250px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 5px;
+  }
+  .carImgShow {
+    width: 100%;
+    height: 230px;
+    .carImg {
+      width: 100%;
+      height: 185px;
+      object-fit: contain;
+    }
+    .carLogoImg {
+      width: 100%;
+      height: 35px;
+      object-fit: contain;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    @include respond-to(desk-screens) {
+      width: 100%;
+      margin-top: 20px;
+    }
+    @include respond-to(lap-screens) {
+      width: 100%;
+      margin-top: 20px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+      margin-top: 20px;
+    }
+    li {
+      padding: 0px 0px;
+      display: inline-table;
+      font-size: 12px;
+      line-height: 4px;
+      @include respond-to(desk-screens) {
+        display: block;
+        padding: 3px;
+      }
+      @include respond-to(lap-screens) {
+        display: block;
+        padding: 3px;
+      }
+      @include respond-to(mobToLap-screens) {
+        display: block;
+        padding: 3px;
+      }
+      img {
+        width: 15px;
+        height: auto;
+        display: inline-table;
+        margin-right: 3px;
+        vertical-align: middle;
+        margin-bottom: 0;
+      }
+    }
+  }
+  h6 {
+    font-weight: 100;
+    font-size: 14px;
+    border-top: 1px dashed $tabborder;
+    margin-top: 5px;
+    padding-top: 15px;
+    color: $fontColor;
+  }
+  p {
+    font-size: 12px;
+    line-height: 17px;
+    text-align: left;
+    color: #464646;
+    width: auto;
+    display: inline-table;
+    vertical-align: baseline;
+    margin-bottom: 0px;
+    @include respond-to(desk-screens) {
+      width: 275px;
+    }
+    @include respond-to(lap-screens) {
+      width: 100%;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 190px;
+    }
+    @include respond-to(mobile-screens) {
+      width: 100%;
+    }
+  }
+  .freeCancelPop {
+    position: relative;
+    cursor: pointer;
+    color: rgb(0, 109, 240);
+
+    &:hover {
+      .moreDetailToolTip1 {
+        display: inherit;
+      }
+    }
+    .moreDetailToolTip1 {
+      position: absolute;
+      background: #ffffff;
+      z-index: 9;
+      padding: 10px;
+      width: 400px;
+      border: 1px solid $primaryColor;
+      left: 0px;
+      top: 25px;
+      -webkit-box-shadow: 2px 2px 6px 0px #d4d0d0;
+      -moz-box-shadow: 2px 2px 6px 0px #d4d0d0;
+      display: none;
+      @include respond-to(mobile-screens) {
+        width: 100%;
+        left: 0px;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 17px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid $secondryColor;
+        box-shadow: 2px 2px 6px 0px #d4d0d0;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        color: $fontColor;
+        margin-bottom: 5px;
+      }
+      table {
+        border: 1px solid #ddd;
+        thead {
+          tr {
+            th {
+              background: #ddd;
+              text-align: center;
+              padding: 2px;
+              border: 1px solid $borderColor;
+              color: $fontColor;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              text-align: center;
+              padding: 2px;
+              border: 1px solid $borderColor;
+              color: $fontColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#StateLessRoomResInfo .confirmRoomLeft {
+  width: 50%;
+  margin-right: 10px;
+  padding: 10px;
+  @include respond-to(desk-screens) {
+    width: 100%;
+    margin-right: 0px;
+  }
+  @include respond-to(lap-screens) {
+    width: 100%;
+    margin-right: 0px;
+  }
+  @include respond-to(mobToLap-screens) {
+    width: 100%;
+    margin-right: 0px;
+  }
+  .owl-carousel {
+    width: 100% !important;
+    @include respond-to(desk-screens) {
+      height: 250px;
+    }
+    .item {
+      img {
+        width: 100% !important;
+        @include respond-to(desk-screens) {
+          height: 250px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 5px;
+  }
+  .carImgShow {
+    width: 100%;
+    height: 230px;
+    .carImg {
+      width: 100%;
+      height: 185px;
+      object-fit: contain;
+    }
+    .carLogoImg {
+      width: 100%;
+      height: 35px;
+      object-fit: contain;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    @include respond-to(desk-screens) {
+      width: 100%;
+      margin-top: 20px;
+    }
+    @include respond-to(lap-screens) {
+      width: 100%;
+      margin-top: 20px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+      margin-top: 20px;
+    }
+    li {
+      padding: 0px 0px;
+      display: inline-table;
+      font-size: 12px;
+      line-height: 4px;
+      @include respond-to(desk-screens) {
+        display: block;
+        padding: 3px;
+      }
+      @include respond-to(lap-screens) {
+        display: block;
+        padding: 3px;
+      }
+      @include respond-to(mobToLap-screens) {
+        display: block;
+        padding: 3px;
+      }
+      img {
+        width: 15px;
+        height: auto;
+        display: inline-table;
+        margin-right: 3px;
+        vertical-align: middle;
+        margin-bottom: 0;
+      }
+    }
+  }
+  h6 {
+    font-weight: 100;
+    font-size: 14px;
+    border-top: 1px dashed $tabborder;
+    margin-top: 5px;
+    padding-top: 15px;
+    color: $fontColor;
+  }
+  p {
+    font-size: 12px;
+    line-height: 17px;
+    text-align: left;
+    color: #464646;
+    width: auto;
+    display: inline-table;
+    vertical-align: baseline;
+    margin-bottom: 0px;
+    @include respond-to(desk-screens) {
+      width: 275px;
+    }
+    @include respond-to(lap-screens) {
+      width: 275px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 190px;
+    }
+    @include respond-to(mobile-screens) {
+      width: 100px;
+    }
+  }
+  .freeCancelPop {
+    position: relative;
+    cursor: pointer;
+    color: rgb(0, 109, 240);
+
+    &:hover {
+      .moreDetailToolTip1 {
+        display: block;
+      }
+    }
+    .moreDetailToolTip1 {
+      position: absolute;
+      background: #ffffff;
+      z-index: 9;
+      padding: 10px;
+      width: 400px;
+      border: 1px solid $primaryColor;
+      left: 0px;
+      top: 25px;
+      -webkit-box-shadow: 2px 2px 6px 0px #d4d0d0;
+      -moz-box-shadow: 2px 2px 6px 0px #d4d0d0;
+      display: none;
+      @include respond-to(mobile-screens) {
+        width: 100%;
+        left: 0px;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 17px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid $secondryColor;
+        box-shadow: 2px 2px 6px 0px #d4d0d0;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        color: $fontColor;
+        margin-bottom: 5px;
+      }
+      table {
+        border: 1px solid #ddd;
+        thead {
+          tr {
+            th {
+              background: #ddd;
+              text-align: center;
+              padding: 2px;
+              border: 1px solid $borderColor;
+              color: $fontColor;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              text-align: center;
+              padding: 2px;
+              border: 1px solid $borderColor;
+              color: $fontColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#RoomResInfo .confirmRoomRight {
+  width: 50%;
+  margin-left: 5px;
+  @include respond-to(desk-screens) {
+    width: 100%;
+  }
+  @include respond-to(lap-screens) {
+    width: 100%;
+  }
+  @include respond-to(mobToLap-screens) {
+    width: 100%;
+  }
+  .listTitle {
+    width: 80%;
+    @include respond-to(desk-screens) {
+      width: 100%;
+    }
+    @include respond-to(lap-screens) {
+      width: 100%;
+    }
+    @include respond-to(mobile-screens) {
+      padding-bottom: 5px;
+      width: 42% !important;
+    }
+    
+  }
+
+  .carInfraStru {
+    border-bottom: 1px solid #464646;
+    li {
+      img {
+        width: 18px;
+      }
+      &:last-child {
+        img {
+          width: 14px;
+        }
+      }
+    }
+  }
+  .pickupDropDet {
+    li {
+      width: 49%;
+      h6 {
+        text-align: left;
+      }
+    }
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 10px;
+    color: $fontColor;
+  }
+  p {
+    font-size: 12px;
+    color: $fontColor;
+    img {
+      width: 12px;
+    }
+    a {
+      color: $fontColor;
+    }
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 300;
+    color: $fontColor;
+  }
+  span {
+    font-size: 13px;
+    font-weight: 400;
+    color: $fontColor;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &.conResRoomDet {
+      li {
+        padding: 0px 3px 0px 3px;
+        p {
+          width: auto;
+          text-align: left;
+          @include respond-to(desk-screens) {
+            width: 208px;
+          }
+          @include respond-to(lap-screens) {
+            width: 208px;
+          }
+          @include respond-to(mobToLap-screens) {
+            width: 208px;
+          }
+        }
+      }
+    }
+    li {
+      display: inline-block;
+      // padding: 3px 8px;
+      padding: 3px 8px;
+      text-align: center;
+      vertical-align: middle;
+      @include respond-to(desk-screens) {
+        padding: 3px 25px;
+      }
+      @include respond-to(lap-screens) {
+        padding: 3px 25px;
+      }
+      @include respond-to(mobile-screens) {
+        padding: 3px 12px;
+      }
+      &.border {
+        border: 1px solid $tabborder !important;
+
+        @include respond-to(mobToLap-screens) {
+          width: 25%;
+        }
+        @include respond-to(mobile-screens) {
+          width: 30%;
+        }
+      }
+
+      h5 {
+        color: $fontColor;
+        margin: 0;
+        @include respond-to(desk-screens) {
+          font-size: 17px;
+        }
+        @include respond-to(mobile-screens) {
+          font-size: 14px;
+        }
+      }
+      p {
+        // font-size:14px;
+        // text-transform: uppercase;
+        color: $fontColor;
+        margin-bottom: 0px;
+        display: inline-table;
+        vertical-align: baseline;
+        font-size: 12px;
+
+        @include respond-to(desk-screens) {
+          font-size: 13px;
+        }
+      }
+      img {
+        margin: 0px 10px;
+        width: 22px;
+        display: inline-table;
+        vertical-align: middle;
+      }
+    }
+  }
+  .checkInOut {
+    margin-top: 10px;
+    li {
+      @include respond-to(desk-screens) {
+        width: 30%;
+        text-align: left;
+        padding: 3px 0px;
+      }
+      @include respond-to(lap-screens) {
+        width: 30%;
+        text-align: left;
+        padding: 4px;
+      }
+      @include respond-to(mobToLap-screens) {
+        width: 36%;
+        text-align: left;
+        padding: 4px;
+      }
+      @include respond-to(mobile-screens) {
+        width: 43%;
+        text-align: left;
+        padding: 4px;
+      }
+      img {
+        width: 35px;
+        margin-right: 2px;
+      }
+      span {
+        display: inline-table;
+        vertical-align: middle;
+        b {
+          display: block;
+        }
+      }
+    }
+  }
+  .totalAmountDis {
+    border: 1px solid $tabborder !important;
+    margin-top: 10px;
+    padding: 5px;
+    width: 268px;
+    @include respond-to(mobile-screens){
+      width:240px !important;
+    }
+    li {
+      text-align: left;
+      width: 100%;
+      display: inline-flex;
+      justify-content: space-between;
+      &:last-child {
+        border-top: 1px dashed $tabborder;
+        span {
+          font-size: 16px;
+          font-weight: 600;
+          color: $fontColor;
+        }
+      }
+      .discountRemoveMinus mark {
+        display: none;
+      }
+    }
+  }
+  .addIteinary {
+    font-size: 11px;
+    padding: 10px 8px;
+    outline: none;
+  }
+  .continueBook {
+    font-size: 11px;
+    background: $secondryColor !important;
+    color: $whiteColor;
+    padding: 10px 8px;
+    outline: none;
+  }
+}
+
+#StateLessRoomResInfo .confirmRoomRight {
+  width: 50%;
+  margin-left: 5px;
+  @include respond-to(desk-screens) {
+    width: 100%;
+  }
+  @include respond-to(lap-screens) {
+    width: 100%;
+  }
+  @include respond-to(mobToLap-screens) {
+    width: 100%;
+  }
+  .listTitle {
+    width: 80%;
+    @include respond-to(desk-screens) {
+      width: 100%;
+    }
+    @include respond-to(lap-screens) {
+      width: 100%;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+  }
+
+  .carInfraStru {
+    border-bottom: 1px solid #464646;
+    li {
+      img {
+        width: 18px;
+      }
+      &:last-child {
+        img {
+          width: 14px;
+        }
+      }
+    }
+  }
+  .pickupDropDet {
+    li {
+      width: 49%;
+      h6 {
+        text-align: left;
+      }
+    }
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 10px;
+    color: $fontColor;
+  }
+  p {
+    font-size: 12px;
+    color: $fontColor;
+    img {
+      width: 12px;
+    }
+    a {
+      color: $fontColor;
+    }
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 300;
+    color: $fontColor;
+  }
+  span {
+    font-size: 13px;
+    font-weight: 400;
+    color: $fontColor;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &.conResRoomDet {
+      li {
+        padding: 0px 3px 0px 3px;
+        p {
+          width: 65px;
+          text-align: left;
+          @include respond-to(desk-screens) {
+            width: 208px;
+          }
+          @include respond-to(lap-screens) {
+            width: 208px;
+          }
+          @include respond-to(mobToLap-screens) {
+            width: 208px;
+          }
+        }
+      }
+    }
+    li {
+      display: inline-block;
+      // padding: 3px 8px;
+      padding: 3px 8px;
+      text-align: center;
+      vertical-align: middle;
+      @include respond-to(desk-screens) {
+        padding: 3px 25px;
+      }
+      @include respond-to(lap-screens) {
+        padding: 3px 25px;
+      }
+      @include respond-to(mobile-screens) {
+        padding: 3px 12px;
+      }
+      &.border {
+        border: 1px solid $tabborder !important;
+
+        @include respond-to(mobToLap-screens) {
+          width: 25%;
+        }
+        @include respond-to(mobile-screens) {
+          width: 30%;
+        }
+      }
+
+      h5 {
+        color: $fontColor;
+        margin: 0;
+        @include respond-to(desk-screens) {
+          font-size: 17px;
+        }
+        @include respond-to(mobile-screens) {
+          font-size: 14px;
+        }
+      }
+      p {
+        // font-size:14px;
+        // text-transform: uppercase;
+        color: $fontColor;
+        margin-bottom: 0px;
+        display: inline-table;
+        vertical-align: baseline;
+        font-size: 12px;
+
+        @include respond-to(desk-screens) {
+          font-size: 13px;
+        }
+      }
+      img {
+        margin: 0px 10px;
+        width: 22px;
+        display: inline-table;
+        vertical-align: middle;
+      }
+    }
+  }
+  .checkInOut {
+    margin-top: 10px;
+    li {
+      @include respond-to(desk-screens) {
+        width: 30%;
+        text-align: left;
+        padding: 3px 0px;
+      }
+      @include respond-to(lap-screens) {
+        width: 30%;
+        text-align: left;
+        padding: 4px;
+      }
+      @include respond-to(mobToLap-screens) {
+        width: 36%;
+        text-align: left;
+        padding: 4px;
+      }
+      @include respond-to(mobile-screens) {
+        width: 43%;
+        text-align: left;
+        padding: 4px;
+      }
+      img {
+        width: 35px;
+        margin-right: 2px;
+      }
+      span {
+        display: inline-table;
+        vertical-align: middle;
+        b {
+          display: block;
+        }
+      }
+    }
+  }
+  .totalAmountDis {
+    border: 1px solid $tabborder !important;
+    margin-top: 10px;
+    padding: 5px;
+    width: 268px;
+    li {
+      text-align: left;
+      width: 100%;
+      display: inline-flex;
+      justify-content: space-between;
+      &:last-child {
+        border-top: 1px dashed $tabborder;
+        span {
+          font-size: 16px;
+          font-weight: 600;
+          color: $fontColor;
+        }
+      }
+      .discountRemoveMinus mark {
+        display: none;
+      }
+    }
+  }
+  .addIteinary {
+    font-size: 11px;
+    padding: 10px 8px;
+    outline: none;
+  }
+  .continueBook {
+    font-size: 11px;
+    background: $secondryColor !important;
+    color: $whiteColor;
+    padding: 10px 8px;
+    outline: none;
+  }
+}
+
+.confirmRoomLeft {
+  width: 260px;
+  margin-right: 10px;
+  @include respond-to(desk-screens) {
+    width: 100%;
+    margin-right: 0px;
+  }
+  @include respond-to(lap-screens) {
+    width: 100%;
+    margin-right: 0px;
+  }
+  @include respond-to(mobToLap-screens) {
+    width: 100%;
+    margin-right: 0px;
+  }
+  .owl-carousel {
+    width: 100% !important;
+    @include respond-to(desk-screens) {
+      height: 250px;
+    }
+    .item {
+      img {
+        width: 100% !important;
+        @include respond-to(desk-screens) {
+          height: 250px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 5px;
+  }
+  .carImgShow {
+    width: 100%;
+    height: 230px;
+    .carImg {
+      width: 100%;
+      height: 185px;
+      object-fit: contain;
+    }
+    .carLogoImg {
+      width: 100%;
+      height: 35px;
+      object-fit: contain;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 135px;
+    @include respond-to(desk-screens) {
+      width: 100%;
+      margin-top: 20px;
+    }
+    @include respond-to(lap-screens) {
+      width: 100%;
+      margin-top: 20px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+      margin-top: 20px;
+    }
+    li {
+      padding: 0px 0px;
+      display: inline-table;
+      font-size: 12px;
+      line-height: 4px;
+      @include respond-to(desk-screens) {
+        display: block;
+        padding: 3px;
+      }
+      @include respond-to(lap-screens) {
+        display: block;
+        padding: 3px;
+      }
+      @include respond-to(mobToLap-screens) {
+        display: block;
+        padding: 3px;
+      }
+      img {
+        width: 15px;
+        height: auto;
+        display: inline-table;
+        margin-right: 3px;
+        vertical-align: middle;
+        margin-bottom: 0;
+      }
+    }
+  }
+  h6 {
+    font-weight: 100;
+    font-size: 14px;
+    border-top: 1px dashed $tabborder;
+    margin-top: 5px;
+    padding-top: 15px;
+    color: $fontColor;
+  }
+  p {
+    font-size: 12px;
+    line-height: 17px;
+    text-align: left;
+    color: #464646;
+    width: 100px;
+    display: inline-table;
+    vertical-align: baseline;
+    margin-bottom: 0px;
+    @include respond-to(desk-screens) {
+      width: 275px;
+    }
+    @include respond-to(lap-screens) {
+      width: 275px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 190px !important;
+    }
+    @include respond-to(mobile-screens) {
+      width: 100px;
+    }
+  }
+  .freeCancelPop {
+    position: relative;
+    cursor: pointer;
+    color: rgb(0, 109, 240);
+
+    &:hover {
+      .moreDetailToolTip1 {
+        display: block;
+      }
+    }
+    .moreDetailToolTip1 {
+      position: absolute;
+      background: #ffffff;
+      z-index: 9;
+      padding: 10px;
+      width: 400px;
+      border: 1px solid $primaryColor;
+      left: 0px;
+      top: 25px;
+      -webkit-box-shadow: 2px 2px 6px 0px #d4d0d0;
+      -moz-box-shadow: 2px 2px 6px 0px #d4d0d0;
+      display: none;
+      @include respond-to(mobile-screens) {
+        width: 100%;
+        left: 0px;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 17px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid $secondryColor;
+        box-shadow: 2px 2px 6px 0px #d4d0d0;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        color: $fontColor;
+        margin-bottom: 5px;
+      }
+      table {
+        border: 1px solid #ddd;
+        thead {
+          tr {
+            th {
+              background: #ddd;
+              text-align: center;
+              padding: 2px;
+              border: 1px solid $borderColor;
+              color: $fontColor;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              text-align: center;
+              padding: 2px;
+              border: 1px solid $borderColor;
+              color: $fontColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.confirmRoomRight {
+  width: 260px;
+  margin-left: 5px;
+  @include respond-to(desk-screens) {
+    width: 100%;
+  }
+  @include respond-to(lap-screens) {
+    width: 100%;
+  }
+  @include respond-to(mobToLap-screens) {
+    width: 100%;
+  }
+  .listTitle {
+    width: 80%;
+    @include respond-to(desk-screens) {
+      width: 100%;
+    }
+    @include respond-to(lap-screens) {
+      width: 100%;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+  }
+
+  .carInfraStru {
+    border-bottom: 1px solid #464646;
+    li {
+      img {
+        width: 18px;
+      }
+      &:last-child {
+        img {
+          width: 14px;
+        }
+      }
+    }
+  }
+  .pickupDropDet {
+    li {
+      width: 49%;
+      h6 {
+        text-align: left;
+      }
+    }
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 10px;
+    color: $fontColor;
+  }
+  p {
+    font-size: 12px;
+    color: $fontColor;
+    img {
+      width: 12px;
+    }
+    a {
+      color: $fontColor;
+    }
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 300;
+    color: $fontColor;
+  }
+  span {
+    font-size: 13px;
+    font-weight: 600;
+    color: $fontColor;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &.conResRoomDet {
+      li {
+        padding: 0px 3px 0px 3px;
+        p {
+          width: 65px;
+          text-align: left;
+          @include respond-to(desk-screens) {
+            width: 208px;
+          }
+          @include respond-to(lap-screens) {
+            width: 208px;
+          }
+          @include respond-to(mobToLap-screens) {
+            width: 208px;
+          }
+        }
+      }
+    }
+    li {
+      display: inline-block;
+      // padding: 3px 8px;
+      padding: 3px 8px;
+      text-align: center;
+      vertical-align: middle;
+      @include respond-to(desk-screens) {
+        padding: 3px 25px;
+      }
+      @include respond-to(lap-screens) {
+        padding: 3px 25px;
+      }
+      @include respond-to(mobile-screens) {
+        padding: 3px 12px;
+      }
+      &.border {
+        border: 1px solid $tabborder !important;
+
+        @include respond-to(mobToLap-screens) {
+          width: 25%;
+        }
+        @include respond-to(mobile-screens) {
+          width: 30%;
+        }
+      }
+
+      h5 {
+        color: $fontColor;
+        margin: 0;
+        @include respond-to(desk-screens) {
+          font-size: 17px;
+        }
+        @include respond-to(mobile-screens) {
+          font-size: 14px;
+        }
+      }
+      p {
+        // font-size:14px;
+        // text-transform: uppercase;
+        color: $fontColor;
+        margin-bottom: 0px;
+        display: inline-table;
+        vertical-align: baseline;
+        font-size: 12px;
+
+        @include respond-to(desk-screens) {
+          font-size: 13px;
+        }
+      }
+      img {
+        margin: 0px 10px;
+        width: 22px;
+        display: inline-table;
+        vertical-align: middle;
+      }
+    }
+  }
+  .checkInOut {
+    margin-top: 10px;
+    li {
+      @include respond-to(desk-screens) {
+        width: 30%;
+        text-align: left;
+        padding: 3px 0px;
+      }
+      @include respond-to(lap-screens) {
+        width: 30%;
+        text-align: left;
+        padding: 4px;
+      }
+      @include respond-to(mobToLap-screens) {
+        width: 36%;
+        text-align: left;
+        padding: 4px;
+      }
+      @include respond-to(mobile-screens) {
+        width: 43%;
+        text-align: left;
+        padding: 4px;
+      }
+      img {
+        width: 35px;
+        margin-right: 2px;
+      }
+      span {
+        display: inline-table;
+        vertical-align: middle;
+        b {
+          display: block;
+        }
+      }
+    }
+  }
+  .totalAmountDis {
+    border: 1px solid $tabborder !important;
+    margin-top: 10px;
+    padding: 5px;
+    width: 268px;
+    li {
+      text-align: left;
+      width: 100%;
+      display: inline-flex;
+      justify-content: space-between;
+      &:last-child {
+        border-top: 1px dashed $tabborder;
+        span {
+          font-size: 16px;
+          font-weight: 600;
+          color: $fontColor;
+        }
+      }
+      .discountRemoveMinus mark {
+        display: none;
+      }
+    }
+  }
+  .addIteinary {
+    font-size: 11px;
+    padding: 10px 8px;
+    outline: none;
+  }
+  .continueBook {
+    font-size: 11px;
+    background: $secondryColor !important;
+    color: $whiteColor;
+    padding: 10px 8px;
+    outline: none;
+  }
+}
+
+.otherSectionBg {
+  width: 100%;
+  border: 1px solid $tabborder;
+  background: $whiteColor;
+  padding: 10px;
+  margin-bottom: 15px;
+  .headerTitles {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    &.paymentRes {
+      @include respond-to(mobToLap-screens) {
+        display: block;
+      }
+    }
+    h5 {
+      font-weight: 200;
+      color: $fontColor;
+      @include respond-to(mobile-screens) {
+        font-size: 14px;
+      }
+    }
+    div {
+      vertical-align: middle;
+      display: inline-flex;
+      margin-top: 2px;
+      span {
+        font-size: 12px;
+        /* vertical-align: middle; */
+        /* display: inline-table; */
+        margin: 2px 5px;
+      }
+      input[type="checkbox"] {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+      }
+
+      label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: 40px;
+        height: 22px;
+        background: grey;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+      }
+
+      label:after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        border-radius: 90px;
+        transition: 0.3s;
+      }
+
+      input:checked + label {
+        background: #84e689;
+      }
+
+      input:checked + label:after {
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+      }
+
+      label:active:after {
+        width: 20px;
+      }
+    }
+  }
+  .hotelProtectInfo {
+    width: 100%;
+    margin-top: 10px;
+    &.isHidden {
+      display: none;
+    }
+    .infoText {
+      font-weight: normal;
+      line-height: 18px;
+    }
+    .bgColorSelect {
+      -webkit-appearance: none;
+      outline: none;
+      background-color: #ebebeb;
+      background-image: url("../images/selarrow.png");
+      background-repeat: no-repeat;
+      background-position: 95% 50%;
+    }
+    small {
+      color: #c90000;
+      font-size: 12px;
+      display: inline-table;
+      vertical-align: middle;
+      img {
+        width: 13px;
+      }
+    }
+    p {
+      font-size: 13px;
+      font-weight: 200;
+      color: $fontColor;
+      margin-bottom: 5px;
+    }
+    ol {
+      margin: 0 0 10px 0;
+      padding-left: 15px;
+      li {
+        font-size: 12px;
+        font-weight: 200;
+        color: $fontColor;
+      }
+    }
+    span {
+      font-size: 13px;
+      b {
+        color: #ff0000;
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 100%;
+      display: block;
+      li {
+        width: 100%;
+        display: block;
+        padding: 10px;
+        background: #dddddd;
+        margin-bottom: 5px;
+        div {
+          display: table-row;
+          input {
+            display: table-cell;
+          }
+          //radio button style
+          input[type="radio"] {
+            &:checked {
+              position: absolute;
+              left: -9999px;
+              + {
+                label {
+                  position: relative;
+                  padding-left: 15px;
+                  cursor: pointer;
+                  line-height: 20px;
+                  top: -5px;
+                  display: inline-block;
+                  color: #666;
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 18px;
+                    height: 18px;
+                    border: 1px solid $tabborder;
+                    border-radius: 100%;
+                    background: $whiteColor;
+                  }
+                  &:after {
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+                    background: $primaryColor;
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    border-radius: 100%;
+                    -webkit-transition: all 0.2s ease;
+                    transition: all 0.2s ease;
+                    opacity: 1;
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                  }
+                }
+              }
+            }
+            &:not(:checked) {
+              position: absolute;
+              left: -9999px;
+              + {
+                label {
+                  position: relative;
+                  padding-left: 15px;
+                  cursor: pointer;
+                  line-height: 20px;
+                  top: -5px;
+                  display: inline-block;
+                  color: #666;
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 18px;
+                    height: 18px;
+                    border: 1px solid $tabborder;
+                    border-radius: 100%;
+                    background: #fff;
+                  }
+                  &:after {
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+                    background: $primaryColor;
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+                    border-radius: 100%;
+                    -webkit-transition: all 0.2s ease;
+                    transition: all 0.2s ease;
+                    opacity: 0;
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                  }
+                }
+              }
+            }
+          }
+          //radio button style
+          div {
+            display: table-cell;
+            padding: 0px 10px;
+            p {
+              font-size: 13px;
+              font-weight: normal;
+              margin: 0;
+              line-height: 15px;
+            }
+            small {
+              color: $fontColor;
+            }
+          }
+          span {
+            display: table-cell;
+            text-align: right;
+            vertical-align: middle;
+            width: 100px;
+            font-size: 20px;
+            font-weight: 500;
+            color: $tabborder;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cardImg {
+  width: 300px;
+  height: 30px;
+  object-fit: none;
+  @include respond-to(mobile-screens){
+    width: 280px;
+    height: 30px;
+    object-fit: none;
+
+  }
+}
+
+.paymentDetails {
+  width: 100%;
+  margin-top: 10px;
+  h5 {
+    font-weight: 200;
+    color: $fontColor;
+    margin-top: 10px;
+  }
+  .form-group {
+    margin-bottom: 5px;
+    .creditcardNumber {
+      // font-weight: 500;
+      // font-size: 15px;
+    }
+    .whosText {
+      font-size: 15px;
+      font-weight: 300;
+    }
+    label {
+      width: 100%;
+      font-size: 13px;
+      margin-bottom: 3px;
+      font-weight: 200;
+    }
+    input {
+      width: 100%;
+      font-size: 13px;
+
+      padding: 5px;
+      height: 35px;
+      border: 1px solid $tabborder;
+    }
+    select {
+      width: 100%;
+      font-size: 13px;
+      padding: 5px;
+      height: 35px;
+      border: 1px solid $tabborder;
+      -webkit-appearance: none;
+      background: url("../images/selarrow.png") no-repeat 94% 50%;
+    }
+    .styled-checkbox {
+      position: absolute; // take it out of document flow
+      opacity: 0; // hide it
+
+      & + label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        top: -5px;
+      }
+      &:checked + label:before {
+        background: #fff;
+      }
+      // Box.
+      & + label:before {
+        content: "";
+        margin-right: 10px;
+        margin-top: 0px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $tabborder;
+      }
+
+      // Checkmark. Could be replaced with an image
+      &:checked + label:after {
+        content: "\2713";
+        position: absolute;
+        /* width: 20px; */
+        left: 2px;
+        font-size: 33px;
+        font-weight: 600;
+        color: #11a03d;
+        top: -21px;
+      }
+    }
+  }
+  .searchBtn {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    &.completebtn {
+      background: $secondryColor;
+      color: #fff;
+    }
+    @include respond-to(desk-screens) {
+      margin-left: 10px;
+    }
+    @include respond-to(lap-screens) {
+      margin-left: 10px;
+    }
+    @include respond-to(mobile-screens) {
+      margin-left: 0px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  .form-group {
+    position: relative;
+    .DateRangePicker {
+      top: 65px;
+    }
+    @extend %DateRangePicker;
+  }
+  .css-10nd86i {
+    border-radius: 0px;
+    border: 1px solid $tabborder;
+    height: 35px;
+  }
+  .css-vj8t7z,
+  .css-1hwfws3 {
+    height: 30px;
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+    background: transparent;
+    outline: none !important;
+    .css-1hwfws3 {
+      font-size: 14px;
+      height: 30px;
+    }
+    .css-xp4uvy {
+      top: 55%;
+    }
+    .css-1wy0on6 {
+      height: 35px;
+    }
+  }
+  .css-15k3avv {
+    font-size: 14px;
+  }
+  .css-1g6gooi {
+    input {
+      height: 30px;
+      font-size: 14px;
+      outline: none;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+// sign in popup design style
+.backgroundDark {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.signInPopup {
+  max-width: 450px !important;
+  // top:15%;
+  @include respond-to(mobile-screens) {
+    top: 0%;
+    .modal-content .modal-body h6 {
+      font-size: 4vw;
+    }
+  }
+  .modal-content {
+    border-radius: 0px;
+    .modal-header {
+      background: $titleBg;
+      padding: 10px;
+      text-align: center;
+      .modal-title {
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        color: $fontColor;
+        font-size: 22px;
+        font-weight: 300;
+        @include respond-to(mobile-screens) {
+          font-size: 18px;
+        }
+      }
+      button {
+        font-size: 40px;
+        color: $fontColor;
+        opacity: 1;
+        position: absolute;
+        right: 12px;
+        top: 5px;
+        outline: none;
+        font-weight: 100;
+        @include respond-to(mobile-screens) {
+          font-size: 30px;
+        }
+      }
+    }
+    .modal-body {
+      border: none;
+      h6 {
+        font-weight: normal;
+        color: $fontColor;
+      }
+      .socialBtnGroup {
+        width: 100%;
+        display: block;
+        text-align: center;
+        button {
+          display: inline-flex;
+          padding: 0px;
+          justify-content: start;
+          // border: 1px solid $tabborder;
+          background: $whiteColor;
+          padding: 6px;
+          width: 100%;
+          vertical-align: middle;
+          margin-right: 15px;
+          color: rgba(0, 0, 0, 0.54);
+          &:first-child {
+            margin-right: 10px;
+          }
+          &:last-child {
+            margin-right: 0px;
+          }
+          img {
+            width: 30px;
+            margin-right: 20px;
+          }
+        }
+      }
+      .signWithEmail {
+        width: 100%;
+        display: block;
+        /* vertical-align: middle; */
+        margin: 10px 0px;
+        padding: 5px;
+        @include respond-to(mobile-screens) {
+          text-align: center;
+        }
+        hr {
+          border-top: 2px dashed #949494;
+          width: 113px;
+          display: inline-table;
+          vertical-align: middle;
+          @include respond-to(mobile-screens) {
+            width: 20%;
+          }
+        }
+        h6 {
+          display: inline-table;
+          font-weight: normal;
+          vertical-align: middle;
+          color: $fontColor;
+          padding: 0px 5px;
+          margin: 0;
+          @include respond-to(mobile-screens) {
+            font-size: 14px;
+          }
+        }
+      }
+      .signInForm {
+        width: 100%;
+        display: block;
+        .form-group {
+          label {
+            font-size: 14px;
+            color: #464646;
+            margin: 0;
+            font-weight: 200;
+          }
+          .form-control {
+            border: 1px solid $tabborder;
+            border-radius: 0px;
+            text-indent: 25px;
+            &:focus {
+              outline: none;
+              box-shadow: none;
+            }
+          }
+          a {
+            font-size: 14px;
+          }
+          button {
+            padding: 10px 20px;
+            width: 100%;
+            margin: 0px 0px 10px 0px;
+          }
+          .dontHaveAccount {
+            font-size: 14px;
+            color: $fontColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+.filtercheckbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    color: $fontColor;
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  // Box.
+  & + label:before {
+    content: "";
+    margin-right: 4px;
+    margin-top: 2px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 1px solid $tabborder;
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: $primaryColor;
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: $primaryColor;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 9px;
+    background: $secondryColor;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 $secondryColor, 4px 0 0 $secondryColor,
+    4px -2px 0 $secondryColor, 4px -4px 0 $secondryColor,
+    4px -6px 0 $secondryColor, 4px -8px 0 $secondryColor;
+    transform: rotate(45deg);
+  }
+}
+
+.filtercheckboxCredit {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    color: $fontColor;
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  // Box.
+  & + label:before {
+    content: "";
+    margin-right: 4px;
+    margin-top: 2px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 1px solid $tabborder;
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: $primaryColor;
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: $primaryColor;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 9px;
+    background: $secondryColor;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 $secondryColor, 4px 0 0 $secondryColor,
+    4px -2px 0 $secondryColor, 4px -4px 0 $secondryColor,
+    4px -6px 0 $secondryColor, 4px -8px 0 $secondryColor;
+    transform: rotate(45deg);
+  }
+}
+
+.userIcon {
+  position: relative;
+  &:after {
+    @extend %inputIcons;
+    background: url(../images/user.png) no-repeat;
+  }
+}
+
+.passwordIcon {
+  position: relative;
+  &:after {
+    @extend %inputIcons;
+    background: url(../images/lock.png) no-repeat;
+  }
+}
+
+.mailIcon {
+  position: relative;
+  &:after {
+    @extend %inputIcons;
+    background: url(../images/mail.png) no-repeat;
+  }
+}
+
+.flightIcon {
+  position: relative;
+  &:after {
+    @extend %inputIcons;
+    background: url(../images/dashboard/plane.png) no-repeat;
+  }
+}
+
+.streetIcon {
+  position: relative;
+  &:after {
+    @extend %inputIcons;
+    background: url(../images/dashboard/street-map.png) no-repeat;
+  }
+}
+
+.callIcon {
+  position: relative;
+  &:after {
+    @extend %inputIcons;
+    background: url(../images/dashboard/call.png) no-repeat;
+  }
+}
+
+/* dashboard design style starts */
+.navbarBg {
+  box-shadow: 3px 3px 2px 0px $titleBg;
+  -webkit-box-shadow: 3px 3px 2px 0px $titleBg;
+  -moz-box-shadow: 3px 3px 2px 0px $titleBg;
+}
+
+.dashSection {
+  margin: 30px 0px;
+}
+
+.dashContainer {
+  display: flex;
+  flex-wrap: wrap;
+  .dashLeftSide {
+    margin-top: 15px;
+    width: 270px;
+    @include respond-to(desk-screens) {
+      width: 235px;
+    }
+
+    @include respond-to(all-screens) {
+      width: 100%;
+    }
+    .profileView {
+      background: $titleBg;
+      padding: 10px;
+      min-height: 250px;
+      text-align: center;
+      margin-bottom: 15px;
+
+      @include respond-to(mobile-screens) {
+        min-height: 200px;
+      }
+      h4 {
+        color: $fontColor;
+        font-size: 22px;
+        font-weight: 300;
+      }
+      p {
+        margin: 0;
+        line-height: 18px;
+        font-size: 13px;
+        color: $fontColor;
+      }
+    }
+  }
+}
+
+.dashContainer .dashTitleBg {
+  width: 100%;
+  background: $primaryColor;
+  border: 1px solid $borderColor;
+  display: flex;
+  justify-content: space-evenly;
+
+  h3 {
+    text-transform: uppercase;
+    color: $fontColor;
+    font-weight: 600;
+    margin: 12px;
+    font-size: 20px;
+    width: 473px;
+    @include respond-to(desk-screens) {
+      width: 100%;
+      text-align: center;
+    }
+    @include respond-to(all-screens) {
+      width: 100%;
+      text-align: center;
+    }
+    @include respond-to(mobile-screens) {
+      font-size: 16px;
+    }
+  }
+}
+
+/* .dashLeftSide{width:100%;} */
+.dashLeftSide .profileImgBg {
+  margin: auto;
+  text-align: center;
+  @include respond-to(desk-screens) {
+    margin: 10px auto;
+  }
+  @include respond-to(mobile-screens) {
+    margin: 10px auto;
+  }
+  img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    @include respond-to(desk-screens) {
+      width: 120px;
+      height: 120px;
+    }
+    @include respond-to(mobile-screens) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  position: relative;
+  .uploadIcon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    color: $fontColor;
+    background: $primaryColor;
+    display: block;
+    bottom: 0;
+    right: 63px;
+    border-radius: 50%;
+    padding: 4px 9px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.dashboardMenuItems {
+  padding: 0px;
+  list-style: none;
+  @include respond-to(xstab-screens) {
+    margin: auto;
+    text-align: center;
+  }
+  li {
+    padding: 5px 10px;
+    background: $primaryColor;
+    border: 1px solid $borderColor;
+    margin: 10px 0px;
+    border-radius: 4px;
+    @include respond-to(desk-screens) {
+      text-align: center;
+    }
+    @include respond-to(xstab-screens) {
+      display: inline-block;
+      margin: 10px 5px 10px 0px;
+      padding: 5px 8px;
+      text-align: center;
+    }
+    @include respond-to(mobile-screens) {
+      padding: 5px 5px;
+      margin: 5px 0px;
+    }
+    span {
+      width: 45px;
+      height: 45px;
+      display: block;
+      border-radius: 50%;
+      background: $whiteColor;
+      padding: 9px;
+      display: inline-table;
+      vertical-align: middle;
+      border: 1px solid $borderColor;
+      box-shadow: inset 0px 2px 2px $titleBg;
+      @include respond-to(desk-screens) {
+        text-align: center;
+        margin: auto;
+      }
+      @include respond-to(xstab-screens) {
+        width: 35px;
+        height: 35px;
+        padding: 4px;
+        text-align: center;
+        margin: 5px auto;
+        display: block;
+      }
+      @include respond-to(mobile-screens) {
+        width: 30px;
+        height: 30px;
+        padding: 6px 8px;
+      }
+      img {
+        width: 25px;
+        @include respond-to(xstab-screens) {
+          width: 18px;
+        }
+        @include respond-to(mobile-screens) {
+          width: 20px;
+        }
+      }
+    }
+    h4 {
+      display: inline-table;
+      vertical-align: middle;
+      text-transform: uppercase;
+      margin: 10px;
+      color: $fontColor;
+      font-size: 18px;
+      font-weight: 300;
+      @include respond-to(desk-screens) {
+        margin: 5px;
+        font-size: 16px;
+        display: block;
+      }
+      @include respond-to(xstab-screens) {
+        font-size: 15px;
+        margin: 0;
+      }
+      @include respond-to(mobile-screens) {
+        margin: 5px;
+        font-size: 16px;
+      }
+    }
+    &.active,
+    &:hover {
+      background: $secondryColor;
+      cursor: pointer;
+      h4 {
+        color: $whiteColor;
+      }
+    }
+  }
+}
+
+.dashRightSide {
+  border: 1px solid $tabborder;
+  margin-left: 25px;
+  width: 815px;
+  border-top: none;
+  padding: 15px;
+  @include respond-to(desk-screens) {
+    width: 670px;
+  }
+  @include respond-to(all-screens) {
+    width: 100%;
+    margin-left: 0px;
+    border: 1px solid $tabborder;
+  }
+  .overViewIcon {
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid $tabborder;
+    text-align: center;
+    @include respond-to(desk-screens) {
+      width: 31%;
+      margin: 10px 10px 10px 0px;
+    }
+    @include respond-to(all-screens) {
+      width: 19%;
+      margin: 10px 3px;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 30%;
+      margin: 10px 7px;
+    }
+    @include respond-to(mobile-screens) {
+      width: 100%;
+      margin: 10px 0px;
+    }
+
+    div {
+      width: 100%;
+      min-height: 80px;
+      @include respond-to(all-screens) {
+        min-height: 65px;
+      }
+      @include respond-to(mobile-screens) {
+        min-height: 40px;
+      }
+      img {
+        width: 90px;
+        @include respond-to(all-screens) {
+          width: 50px;
+        }
+      }
+    }
+    h4 {
+      margin-top: 20px;
+      margin-bottom: 0px;
+      font-weight: 300;
+      color: $fontColor;
+      @include respond-to(mobile-screens) {
+        margin-top: 15px;
+        font-size: 17px;
+      }
+    }
+
+    p {
+      margin: 0px;
+      line-height: 18px;
+      color: $fontColor;
+      @include respond-to(mobile-screens) {
+        font-size: 15px;
+      }
+    }
+    &:last-child {
+      div {
+        img {
+          width: 100px;
+          @include respond-to(all-screens) {
+            width: 70px;
+          }
+        }
+      }
+    }
+  }
+  .cardDetails {
+    // width: 185px;
+    width: 250px;
+    background: #ebebeb;
+    border: 1px solid #ebebeb;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 4px;
+
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+    }
+    .cardEditOpt {
+      width: 100%;
+      text-align: right;
+      margin-bottom: 5px;
+      .editIcon {
+        width: 25px;
+        height: 25px;
+        border: 1px solid $thBorder;
+        border-radius: 50%;
+        display: inline-block;
+        padding: 4px;
+        color: #848282;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      .closeIcon {
+        width: 25px;
+        height: 25px;
+        border: 1px solid $thBorder;
+        border-radius: 50%;
+        display: inline-block;
+        padding: 0px 6px;
+        color: #848282;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    }
+    h6 {
+      color: $fontColor;
+      font-weight: 200;
+    }
+    .cardValidInfo {
+      width: 100%;
+      display: block;
+      span {
+        &:nth-child(1) {
+          font-size: 10px;
+          width: 20px;
+          display: inline-table;
+          line-height: 10px;
+          vertical-align: middle;
+        }
+        &:nth-child(2) {
+          vertical-align: middle;
+        }
+      }
+    }
+    .cardBaseDet {
+      width: 100%;
+      display: block;
+      margin: 10px 0px 0px 0px;
+      .holderName {
+        text-transform: uppercase;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 160px;
+        overflow: hidden;
+        @include respond-to(mobToLap-screens) {
+          width: auto;
+        }
+        @include respond-to(mobile-screens) {
+          width: 150px;
+        }
+      }
+      .visaCard {
+        background: url(../images/paymentCard1.png) 10% 45%;
+        width: 42px;
+      }
+      .masterCard {
+        background: url(../images/paymentCard1.png) 32% 45%;
+        width: 42px;
+      }
+      .discoverCard {
+        background: url(../images/paymentCard1.png) 54% 45%;
+        width: 42px;
+      }
+      .expressCard {
+        background: url(../images/paymentCard1.png) 76% 45%;
+        width: 42px;
+      }
+      .clubCard {
+        background: url(../images/paymentCard1.png) 99% 45%;
+        width: 42px;
+      }
+    }
+    .addNewCard {
+      text-transform: uppercase;
+      font-weight: 300;
+      text-align: center;
+      span {
+        width: 30px;
+        height: 30px;
+        border: 1px solid $secondryColor;
+        display: inline-block;
+        border-radius: 50%;
+        padding: 2px 7px;
+        color: $secondryColor;
+      }
+    }
+  }
+}
+
+.overViewCateg {
+  width: 371px;
+  margin: 10px;
+  padding: 8px;
+  border: 1px solid $tabborder;
+  display: inline-table;
+  @include respond-to(desk-screens) {
+    width: 100%;
+    margin: 10px 0px;
+  }
+  @include respond-to(all-screens) {
+    width: 100%;
+    margin: 10px 0px;
+  }
+  img {
+    width: 25px;
+    vertical-align: middle;
+  }
+  span {
+    vertical-align: middle;
+    margin-left: 20px;
+    font-size: 14px;
+  }
+}
+
+.overViewIConImg {
+  width: 74px;
+}
+
+.recentActivity {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  @include respond-to(desk-screens) {
+    width: 100%;
+    padding: 10px 0px;
+  }
+  @include respond-to(all-screens) {
+    width: 100%;
+    padding: 10px 0px;
+  }
+
+  h4 {
+    padding-bottom: 10px;
+    color: $fontColor;
+    border-bottom: 1px solid #ddd;
+    font-weight: 100;
+    font-size: 20px;
+    @include respond-to(mobile-screens) {
+      font-size: 18px;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0px;
+    width: 100%;
+    li {
+      padding: 15px 10px;
+      background: $titleBg;
+      margin: 10px 0px;
+      display: flex;
+      @include respond-to(mobile-screens) {
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 8px 0px;
+      }
+      span {
+        color: $fontColor;
+
+        &:nth-child(1) {
+          flex-grow: 0;
+          vertical-align: middle;
+          align-self: center;
+          @include respond-to(mobile-screens) {
+            margin: auto;
+            width: 30px;
+            height: 30px;
+            border: 1px solid $tabborder;
+            border-radius: 50%;
+            padding: 1px 5px;
+          }
+          img {
+            width: 24px;
+            margin-right: 10px;
+            @include respond-to(mobile-screens) {
+              width: 18px;
+              margin-right: 0px;
+            }
+          }
+        }
+        &:nth-child(2) {
+          flex-grow: 6;
+          vertical-align: middle;
+          align-self: center;
+          font-size: 15px;
+          @include respond-to(mobile-screens) {
+            font-size: 13px;
+            text-align: center;
+          }
+        }
+        &:nth-child(3) {
+          flex-grow: 0;
+          vertical-align: middle;
+          align-self: center;
+          font-size: 12px;
+          @include respond-to(mobile-screens) {
+            margin: auto;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// my trip menu styles
+
+.hideSection {
+  display: none;
+}
+
+.mytripTable {
+  width: 100%;
+  display: block;
+
+  table {
+    width: 100%;
+    @include respond-to(mobToLap-screens) {
+      border: 0;
+    }
+    caption {
+      @include respond-to(mobToLap-screens) {
+        font-size: 12px;
+      }
+    }
+    thead {
+      @include respond-to(mobToLap-screens) {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+      th {
+        border: 1px solid $thBorder;
+        text-align: center;
+        font-size: 14px;
+        padding: 8px;
+        color: $fontColor;
+        img {
+          width: 16px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        @include respond-to(mobToLap-screens) {
+          border-bottom: 3px solid #ddd;
+          display: block;
+          margin-bottom: 0.625em;
+        }
+        &.odd {
+          background: $titleBg;
+          cursor: pointer;
+        }
+        &.even {
+          background: $whiteColor;
+          cursor: pointer;
+        }
+        &.collapseRow {
+          td {
+            padding: 0px;
+            div.detailsShow {
+              width:90%;
+              border: 2px solid #acacac;
+              padding: 8px 0px;
+              @media screen and (max-width: 1024px){
+              width:73%;
+              border: 2px solid #acacac;
+              padding: 8px 0px;
+              }
+              @media screen and (max-width: 768px){
+                width:75%;
+                border: 2px solid #acacac;
+                padding: 8px 0px;
+                }
+                @include respond-to(mobile-screens){
+                  width:100%; 
+                }
+              .flightDetails {
+                padding: 5px 8px;
+                &.borderRight {
+                  border-right: 1px dashed $tabborder;
+                }
+                h6 {
+                  font-weight: 200;
+                  color: $fontColor;
+                  margin: 0;
+                  font-size: 14px;
+                }
+                p {
+                  font-weight: normal;
+                  font-size: 12px;
+                }
+                ul {
+                  padding: 0;
+                  margin: 0;
+                  list-style: none;
+                  li {
+                    display: inline-table;
+                    vertical-align: middle;
+
+                    .flightIcon {
+                      display: block;
+                      margin-bottom: 20px;
+                      width: 24px;
+                    }
+                    .clockIcon {
+                      display: block;
+                      width: 20px;
+                    }
+                    .flightDate {
+                      display: block;
+                      /* vertical-align: middle; */
+                      font-size: 15px;
+                      font-weight: 300;
+                    }
+                    .flighTime {
+                      display: block;
+                      border: 1px solid $tabborder;
+                      width: 80px;
+                      padding: 6px;
+                      font-size: 14px;
+                      p {
+                        font-size: 11px;
+                        line-height: 10px;
+                        margin: 0px;
+                      }
+                    }
+                    .arrowDivied {
+                      width: 14px;
+                      margin-top: 20px;
+                    }
+                    .flightRunTime {
+                      display: block;
+                      /* vertical-align: middle; */
+                      font-size: 17px;
+                      font-weight: 300;
+                      p {
+                        display: inline-block;
+                        font-size: 11px;
+                        line-height: 10px;
+                        margin: 0px;
+                      }
+                    }
+                  }
+                }
+              }
+              .priceDetails {
+                padding: 5px 10px;
+                text-align: left;
+                .totalAmountDis {
+                  border: 1px solid $tabborder !important;
+                  margin-top: 10px;
+                  padding: 5px;
+                  width: 255px;
+                  li {
+                    text-align: left;
+                    width: 100%;
+                    display: inline-flex;
+                    justify-content: space-between;
+                    &:last-child {
+                      border-top: 1px dashed $tabborder;
+                      span {
+                        font-size: 13px;
+                        font-weight: 300;
+                        color: $fontColor;
+                      }
+                    }
+                    span {
+                      font-size: 12px;
+                    }
+                  }
+                }
+                .OtherOptions {
+                  background: $titleBg;
+                  border: 1px solid $tabborder;
+                  padding: 3px;
+                  position: relative;
+                  div {
+                    align-self: center;
+                    a {
+                      img {
+                        width: 21px;
+                        margin-right: 5px;
+                      }
+                    }
+                    &.calenderView {
+                      a {
+                        img {
+                          width: 24px;
+                          margin-right: 0px;
+                        }
+                      }
+                    }
+                  }
+                  .socialShare {
+                    list-style: none;
+                    position: absolute;
+                    margin: 0;
+                    padding: 0;
+                    top: 3px;
+                    left: 65px;
+                    background: $whiteColor;
+                    border: 1px solid $tabborder;
+                    border-radius: 4px;
+                    li {
+                      display: inline-block;
+                      padding: 2px 5px;
+                      img {
+                        width: 19px;
+                      }
+                    }
+                    &:after {
+                      content: "";
+                      border-top: 5px solid transparent;
+                      border-bottom: 5px solid transparent;
+                      border-right: 15px solid $tabborder;
+                      width: 0;
+                      height: 0;
+                      position: absolute;
+                      left: -15px;
+                      top: 8px;
+                    }
+                    &:before {
+                      content: "";
+                      border-top: 4px solid transparent;
+                      border-bottom: 4px solid transparent;
+                      border-right: 14px solid $whiteColor;
+                      width: 0;
+                      height: 0;
+                      position: absolute;
+                      left: -13px;
+                      top: 9px;
+                      z-index: 2;
+                    }
+                  }
+                }
+                h6 {
+                  font-weight: 300;
+                  font-size: 13px;
+                  padding-bottom: 10px;
+                  &.borderBtm {
+                    border-bottom: 1px dashed $tabborder;
+                  }
+                }
+                p {
+                  font-size: 12px;
+                  color: $fontColor;
+                }
+              }
+              .confirmRoomLeft {
+                margin-left: 10px;
+                @include respond-to(desk-screens) {
+                  margin-left: 0px;
+                  padding: 10px;
+                }
+                @include respond-to(all-screens) {
+                  margin-left: 0px;
+                  padding: 10px;
+                }
+                .owl-carousel {
+                  @include respond-to(desk-screens) {
+                    height: 180px;
+                  }
+                  @include respond-to(all-screens) {
+                    height: 180px;
+                  }
+                  .item {
+                    width: 220px;
+                    height: 180px;
+                    @include respond-to(desk-screens) {
+                      width: 100% !important;
+                    }
+                    @include respond-to(all-screens) {
+                      width: 100% !important;
+                    }
+                    img {
+                      width: 100% !important;
+                      height: 180px;
+                    }
+                  }
+                }
+                ul {
+                  margin-top: 25px;
+                  text-align: left;
+                  li {
+                    text-align: left;
+                  }
+                }
+              }
+              .confirmRoomRight {
+                text-align: left;
+                margin-right: 10px;
+                border-right: 1px dashed $tabborder;
+                @include respond-to(desk-screens) {
+                  margin-right: 0px;
+                  padding: 10px;
+                  width: 100%;
+                  border-right: none;
+                }
+                @include respond-to(all-screens) {
+                  width: 100%;
+                  margin-right: 0px;
+                  padding: 10px;
+                  border-right: none;
+                }
+              }
+            }
+          }
+        }
+        td {
+          font-size: 12px;
+          padding: 8px;
+          color: $fontColor;
+          text-align: center;
+          @include respond-to(mobToLap-screens) {
+            border-bottom: 1px solid #ddd;
+            display: block;
+            font-size: 0.8em;
+            text-align: right;
+          }
+
+          &:before {
+            @include respond-to(mobToLap-screens) {
+              content: attr(data-label);
+              float: left;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+          }
+          &:last-child {
+            @include respond-to(mobToLap-screens) {
+              border-bottom: 0;
+            }
+          }
+          &:nth-child(5) {
+            img {
+              width: 10px;
+            }
+          }
+          img {
+            width: 24px;
+          }
+          .hotelTrips {
+            width: 50%;
+            @include respond-to(desk-screens) {
+              width: 100%;
+            }
+            @include respond-to(all-screens) {
+              width: 100%;
+            }
+            &:nth-child(1) {
+              border-right: 1px dashed $thBorder;
+            }
+            h4 {
+              font-size: 14px;
+            }
+            ul {
+              li {
+                margin: 5px 0px;
+                padding: 5px;
+                display: inline-block;
+                @include respond-to(desk-screens) {
+                  width: 17%;
+                }
+                @include respond-to(all-screens) {
+                  width: 17%;
+                }
+                @include respond-to(mobile-screens) {
+                  width: 31%;
+                }
+                img {
+                  width: 20px;
+                }
+                h5 {
+                  font-size: 15px;
+                }
+                p {
+                  font-size: 12px;
+                }
+              }
+            }
+            .checkInOut {
+              li {
+                margin: 5px 0px;
+                padding: 5px 0px;
+                @include respond-to(desk-screens) {
+                  width: 31%;
+                }
+                @include respond-to(all-screens) {
+                  width: 31%;
+                }
+                @include respond-to(mobile-screens) {
+                  width: 49%;
+                }
+                display: inline-block;
+                img {
+                  width: 33px;
+                }
+              }
+            }
+            .socialShare {
+              li {
+                margin: 0px;
+              }
+            }
+            .totalAmountDis {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.myNewAddCard {
+  max-width: 450px;
+  .modal-header {
+    background: $primaryColor;
+    padding: 12px 10px;
+    .modal-title {
+      font-weight: 300;
+      font-size: 21px;
+      margin: 0;
+    }
+    .close {
+      font-size: 30px;
+      opacity: 1;
+      color: $fontColor;
+      outline: none;
+    }
+  }
+  .cardDetailForm {
+    .uploadPreview {
+      width: 200px;
+      height: 200px;
+      margin: 10px auto;
+      padding: 4px;
+      border-radius: 50%;
+      border: 1px solid $tabborder;
+      img {
+        width: 100%;
+        height: 190px;
+
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    .chooseInput {
+      padding: 5px;
+      border-radius: 4px;
+      @include respond-to(mobile-screens){
+        width: 100%;
+        color: unset !important;
+      }
+    }
+    .input-img-name {
+      @include respond-to(mobile-screens){
+        display: none !important;
+      }
+    }
+    .uploadButton {
+      width: 30%;
+      float: right;
+      @include respond-to(mobile-screens){
+        width: 50%;
+        margin: 0 auto;
+        float: none;
+      }
+    }
+
+    label {
+      @extend %labelStyle;
+    }
+    input {
+      @extend %inputStyle;
+      &:focus {
+        @extend %inputFocus;
+      }
+    }
+    .searchBtn {
+      width: 100%;
+    }
+  }
+}
+
+.file-input {
+  @include respond-to(mobile-screens){
+    text-align: center;
+  }
+}
+
+.profileSetting {
+  h5 {
+    font-weight: 300;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $tabborder;
+    margin: 10px 0px;
+  }
+  label {
+    @extend %labelStyle;
+  }
+  input {
+    @extend %inputStyle;
+    text-indent: 20px;
+    &:focus {
+      @extend %inputFocus;
+    }
+  }
+  select {
+    @extend %inputStyle;
+    outline: none;
+    &:focus {
+      @extend %inputFocus;
+    }
+  }
+  .noIcons {
+    input {
+      text-indent: 0px;
+    }
+  }
+  .subscriptInfo {
+    width: 100%;
+    background: #f8f8f8;
+    // padding: 10px;
+    margin-bottom: 15px;
+    label {
+      margin-right: 45px;
+      width: 35%;
+      background: #f1f1f1;
+      padding: 10px;
+    }
+    span {
+      font-size: 15px;
+    }
+  }
+}
+@include respond-to(mobile-screens){
+  .imgWidthDashboard{
+    width:100% !important;
+  }
+  .timeWidthDahboard1{
+    width:28% !important;
+   } 
+   .timeWidthDahboard{
+    width:32px !important;
+   } 
+   .paddingDashboard{
+     padding:0px !important;
+   }
+   .pickUpWidth{
+width:50% !important;
+   }
+   .pickUpWidth1{
+    width:100% !important;
+       }
+       .pickUpWidth2{
+        width:100% !important;
+        .alignDepature{
+          text-align: left;
+          font-size: 12px;
+          margin: 5px;        }
+        
+           }
+       .startingDate{
+         width:46% !important;
+       }
+   .houseOperationWidth{
+    width:100% !important;
+       }
+}
+@media screen and (min-width: 768px) {
+  .pickUpWidth1{
+    width:100% !important;
+       }
+       .pickUpWidth2{
+        width:100% !important;
+        .alignDepature{
+          text-align: left !important;
+          font-size: 12px;
+          margin: 5px;        }
+        
+           }
+}

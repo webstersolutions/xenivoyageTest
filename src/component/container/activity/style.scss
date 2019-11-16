@@ -1,0 +1,246 @@
+$screen-mobile: 320px;
+//$screen-tab:576px;
+$screen-tab: 479px;
+$screen-lap: 767px;
+$screen-medium: 991px;
+$screen-large: 1199px;
+$screen-xlarge: 1366px;
+$screen-xMedium: 1600px;
+$screen-exLarge: 1920px;
+
+//responsive screen resolution defined
+@mixin respond-to($media) {
+  @if $media == mobile-screens {
+    @media only screen and (min-width: $screen-mobile) and (max-width: $screen-tab + 1) {
+      @content;
+    }
+  } @else if $media == tab-screens {
+    @media only screen and (min-width: $screen-tab + 1) and (max-width: $screen-lap) {
+      @content;
+    }
+  } @else if $media == xstab-screens {
+    @media only screen and (min-width: $screen-tab + 1) and (max-width: $screen-medium) {
+      @content;
+    }
+  } @else if $media == lap-screens {
+    @media only screen and (min-width: $screen-lap + 1) and (max-width: $screen-medium) {
+      @content;
+    }
+  } @else if $media == desk-screens {
+    @media only screen and (min-width: $screen-medium + 1) and (max-width: $screen-large) {
+      @content;
+    }
+  } @else if $media == large-screens {
+    @media only screen and (min-width: $screen-large + 1) and (max-width: $screen-xlarge) {
+      @content;
+    }
+  } @else if $media == all-screens {
+    @media only screen and (min-width: $screen-mobile) and (max-width: $screen-medium) {
+      @content;
+    }
+  } @else if $media == big-screens {
+    @media only screen and (min-width: $screen-xMedium) and (max-width: $screen-exLarge) {
+      @content;
+    }
+  } @else if $media == mobToLap-screens {
+    @media only screen and (min-width: $screen-mobile) and (max-width: $screen-lap) {
+      @content;
+    }
+  }
+}
+
+.tabInfoActivity {
+  width: 200px;
+  text-align: center;
+  border: 1px solid #6a6a6a;
+  background: #fff;
+  padding: 8px;
+  margin: 0 0 15px 0;
+  font-size: 15px;
+  font-weight: 300;
+
+  @include respond-to(desk-screens) {
+    margin: 0 0 5px 0;
+    width: 190px;
+  }
+  @include respond-to(mobile-screens) {
+    width: 49%;
+    font-size: 12px;
+  }
+
+  &.activeTab {
+    background: #ebebeb;
+  }
+}
+
+.activityCalendar {
+  .react-datepicker__day {
+    width: 60px;
+  }
+  .react-datepicker__day-name {
+    width: 60px;
+  }
+
+  @include respond-to(mobile-screens) {
+    .react-datepicker__day {
+      width: 35px;
+    }
+    .react-datepicker__day-name {
+      width: 35px;
+    }
+  }
+}
+
+.calenderDay {
+  font-size: 10px;
+  line-height: 20px;
+
+  @include respond-to(mobile-screens) {
+    font-size: 8px;
+    line-height: 15px;
+  }
+}
+
+.activitySearchWrapper {
+  display: flex;
+
+  @include respond-to(mobile-screens) {
+    display: inline;
+  }
+}
+
+.activitySearch {
+  background-color: #F0F0F0;
+  width: 400px;
+  margin-left: 10px;
+  padding: 20px;
+
+  @include respond-to(mobile-screens) {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+  }
+}
+
+.cancellationShortInfo {
+  text-align: center;
+  padding: 35px;
+  font-weight: bold;
+  padding-top: 140px;
+
+  .info {
+    font-size: 18px;
+  }
+
+  .timeline {
+    font-weight: 100;
+  }
+
+  @include respond-to(mobile-screens) {
+    padding: 35px;
+    padding-top: 20px;
+
+    .info {
+      font-size: 16px;
+    }
+
+    .timeline {
+      font-weight: 100;
+      font-size: 12px;
+    }
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+
+  @include respond-to(mobile-screens) {
+    font-size: 16px;
+  }
+}
+
+.activityInfo {
+  font-weight: bold;
+  color: #707070;
+
+  @include respond-to(mobile-screens) {
+    font-size: 12px;
+
+    .listTitle img {
+      width: 66px;
+    }
+
+    .listTitle span {
+      font-size: 11px;
+    }
+  }
+}
+
+.activitySearchHeader {
+  font-weight: bold;
+  font-size: 26px;
+
+  @include respond-to(mobile-screens) {
+    font-size: 18px;
+  }
+}
+
+.activitySearchSubHeader {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000099;
+
+  @include respond-to(mobile-screens) {
+    font-size: 12px;
+  }
+}
+
+.activitySearchHeaderInfo {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+
+  @include respond-to(mobile-screens) {
+    font-size: 16px;
+  }
+}
+
+.selectItineraryBg {
+  width: 100%;
+  border: 1px solid #6a6a6a;
+  margin-bottom: 15px;
+}
+
+.selectItineraryDetail {
+  background: #fff;
+  padding: 15px;
+
+  ul {
+    list-style: none;
+  }
+  @include respond-to(mobile-screens){
+    ul {
+      list-style: none;
+      padding-left: 8px;
+    }
+  .marginLeftLi{
+    margin-left: 5px;
+  }
+  }
+}
+
+.activity-options {
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 10px;
+  @include respond-to(mobile-screens){
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 5px;
+text-align: center;
+.marginDatehours{
+  margin-left: 5px !important;
+}
+  }
+}

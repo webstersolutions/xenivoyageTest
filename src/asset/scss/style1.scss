@@ -1,0 +1,3186 @@
+%buttonStyle {
+  border-radius: 4px;
+  padding: 6px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  vertical-align: middle;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  -webkit-box-shadow: 0 2px 0px 0px $shadowClr;
+  -moz-box-shadow: 0 2px 0px 0px $shadowClr;
+  box-shadow: 0 2px 0px 0px $shadowClr;
+}
+
+%inputStyle {
+  border: 1px solid $tabborder;
+  border-radius: 0px;
+  outline: none;
+  font-size: 14px;
+}
+
+%labelStyle {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 300;
+}
+
+%inputFocus {
+  box-shadow: none;
+  outline: none;
+  border-color: $tabborder;
+}
+
+%inputIcons {
+  content: "";
+  position: absolute;
+  top: 33px;
+  left: 4px;
+  z-index: 99;
+  width: 30px;
+  height: 22px;
+}
+
+%carSearchBack {
+  background: transparent;
+  //font-weight: 500;
+  border: 1px solid $tabborder;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 2px;
+  position: relative;
+}
+
+%carSearchInput {
+  border: none;
+  background: none;
+  width: 100%;
+  height: 37px;
+  outline: none;
+  text-indent: 30px;
+  font-weight: normal;
+}
+
+%checkBoxWithYesOrNo {
+  vertical-align: middle;
+  display: inline-flex;
+  margin-top: 2px;
+  span {
+    font-size: 12px;
+    /* vertical-align: middle; */
+    /* display: inline-table; */
+    margin: 2px 5px;
+  }
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 40px;
+    height: 22px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+  }
+
+  label:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+  }
+
+  input:checked + label {
+    background: #84e689;
+  }
+
+  input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+
+  label:active:after {
+    width: 20px;
+  }
+}
+
+.mapDetails .sehereMap > div {
+  position: inherit !important;
+}
+
+%DateRangePicker {
+  .DateRangePicker {
+    position: absolute;
+    top: 51px;
+    left: 0;
+    display: flex;
+    background: #fff;
+    padding: 10px 0px;
+    border: 1px solid $tabborder;
+    z-index: 999;
+    box-shadow: 3px 1px 4px 0px rgba(144, 144, 144, 0.9);
+    -webkit-box-shadow: 3px 1px 4px 0px rgba(144, 144, 144, 0.9);
+    -moz-box-shadow: 3px 1px 4px 0px rgba(144, 144, 144, 0.9);
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+      display: block;
+    }
+    &:after {
+      content: "";
+      border-right: 8px solid transparent;
+      border-left: 8px solid transparent;
+      border-bottom: 8px solid #d7d7d7;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: -9px;
+      left: 25px;
+    }
+    .DateRangePicker__CalendarSelection {
+      background: $primaryColor;
+      border-radius: 0px;
+      border: none;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      color: $fontColor;
+    }
+    .DateRangePicker__WeekdayHeading,
+    .DateRangePicker__Date {
+      font-weight: 200;
+    }
+    .DateRangePicker__CalendarHighlight--single {
+      background: $primaryColor;
+      border: none;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 0px;
+    }
+    .DateRangePicker__Date--is-selected {
+      color: $fontColor;
+      font-weight: 500;
+    }
+    .DateRangePicker__Month {
+      @include respond-to(mobToLap-screens) {
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 15px;
+      }
+    }
+  }
+}
+
+%NewTabView {
+  .selectNewTab {
+    background: none;
+    border: none;
+    outline: none;
+    /* float: right; */
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    img {
+      width: 15px;
+    }
+  }
+}
+
+%selectArrowImage {
+  -webkit-appearance: none;
+  outline: none;
+  background: url("../images/selarrow.png") no-repeat 92% 50%;
+  @include respond-to(mobToLap-screens) {
+    background: url("../images/selarrow.png") no-repeat 97% 50%;
+  }
+}
+
+@font-face {
+  font-family: "Opensan";
+  font-weight: normal;
+  src: url("../font/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Opensan";
+  font-weight: bold;
+  src: url("../font/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Opensan";
+  font-weight: 300;
+  src: url("../font/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Opensan";
+  font-weight: 500;
+  src: url("../font/OpenSans-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  font-weight: normal;
+  src: url("../font/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  font-weight: 500;
+  src: url("../font/BebasNeue-Bold.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Opensan" !important;
+  font-weight: normal;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.navbar-brand {
+  padding: 0px !important;
+  img {
+    width: 150px;
+  }
+}
+
+.navSelectBox {
+  border: none;
+  @extend %selectArrowImage;
+  border: none;
+  margin-top: 8px;
+  font-size: 14px;
+  margin-left: 5px;
+  color: $fontColor;
+  @include respond-to(mobToLap-screens) {
+    background-position: 97% 50%;
+  }
+}
+
+.navbarSearch {
+  width: 400px;
+  height: 37px;
+  padding: 5px;
+  border: 1px solid $tabborder;
+  border-radius: 4px;
+  // float: left;
+  margin: auto;
+  position: relative;
+  input {
+    width: 100%;
+    border: none;
+    height: 25px;
+    outline: none;
+    position: relative;
+  }
+  img {
+    width: 29px;
+    position: absolute;
+    right: 5px;
+  }
+}
+
+.webResp {
+  display: flex !important;
+  @include respond-to(mobile-screens) {
+    display: none !important;
+  }
+}
+
+.mobileResp {
+  display: none !important;
+  @include respond-to(mobile-screens) {
+    display: flex !important;
+  }
+}
+
+.navbar {
+  margin-bottom: 0px !important;
+  box-shadow: 3px 3px 3px #eaeaea;
+  -webkit-box-shadow: 3px 3px 3px #eaeaea;
+  -moz-box-shadow: 3px 3px 3px #eaeaea;
+}
+
+.nav-item {
+  @include respond-to(all-screens) {
+    text-align: center;
+  }
+}
+
+.cursorNotAllowed {
+  cursor: not-allowed;
+}
+
+.nav-link {
+  color: #4a4a4a !important;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+  @include respond-to(desk-screens) {
+    font-size: 13px;
+  }
+  .arrowIcon {
+    width: 8px;
+    margin-left: 4px;
+  }
+  .profileIcon {
+    width: 34px;
+    height: 34px;
+    background: #f8f8f8;
+    border-radius: 50%;
+    float: left;
+    padding: 2px;
+    margin-top: -5px;
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  &.rightLine {
+    &:before {
+      content: "";
+      border-right: 1px solid $tabborder;
+      position: absolute;
+      width: 1px;
+      height: 20px;
+      right: 1px;
+      @include respond-to(all-screens) {
+        border-right: none;
+      }
+    }
+  }
+  .goPro {
+    background: $primaryColor;
+    border: 1px solid $borderColor;
+    margin-top: 0px;
+    font-weight: 300;
+    color: $fontColor;
+    cursor: pointer;
+  }
+  .currencyFlag {
+    left: unset;
+    top: 12px;
+  }
+}
+
+.currencyVisible {
+  max-width: 400px;
+  top: 52px !important;
+  &.borderNone {
+    border: none;
+    cursor: not-allowed;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 2px 5px;
+      cursor: pointer;
+      position: relative;
+      b {
+        font-weight: 500;
+        color: $fontColor;
+        float: right;
+      }
+      span {
+        // float:left;
+      }
+      .countryName {
+        margin-left: 18px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background: none !important;
+}
+
+.flimSection {
+  width: 100%;
+  float: left;
+  min-height: 220px;
+  background: url("../images/flim.jpg");
+  background-size: cover;
+}
+
+.searchSection {
+  width: 100%;
+  float: left;
+  background-attachment: fixed;
+  background-image: url("../images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 715px;
+  /* height: 100vh; */
+  padding-top: 30px;
+  position: relative;
+  @include respond-to(all-screens) {
+    padding-top: 10px;
+  }
+}
+
+.res-column {
+  @include respond-to(lap-screens) {
+    flex-direction: column !important;
+  }
+  @include respond-to(all-screens) {
+    flex-direction: column !important;
+  }
+}
+
+.tab-column {
+  @include respond-to(desk-screens) {
+    flex-direction: column !important;
+  }
+  @include respond-to(all-screens) {
+    flex-direction: column !important;
+  }
+}
+
+.mobile-column {
+  @include respond-to(mobile-screens) {
+    flex-direction: column !important;
+  }
+}
+
+.smallTabColumn {
+  @include respond-to(all-screens) {
+    flex-direction: column !important;
+  }
+}
+
+.smallColumn {
+  @include respond-to(mobToLap-screens) {
+    flex-direction: column !important;
+  }
+}
+
+.leftSide {
+  margin-top: 30px;
+  width: 850px;
+  @include respond-to(desk-screens) {
+    width: 680px;
+  }
+  @include respond-to(all-screens) {
+    width: 100%;
+  }
+
+  ul.tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    li {
+      color: $fontColor;
+      display: inline-flex;
+      padding: 10px 10px;
+      background: $whiteColor;
+      text-align: center;
+      width: 157px;
+      cursor: pointer;
+      margin: 0px 0px;
+      font-weight: 300;
+      border: 1px solid $tabborder;
+      border-bottom: none;
+      flex-direction: column;
+      /* justify-content: center; */
+      align-self: flex-end;
+      flex-direction: row;
+      justify-content: center;
+      @include respond-to(desk-screens) {
+        width: 122px;
+      }
+      @include respond-to(mobToLap-screens) {
+        width: 100px;
+      }
+      @include respond-to(mobile-screens) {
+        width: 90px;
+      }
+      &:nth-child(6) {
+        .respIconSize {
+          img {
+            @include respond-to(mobToLap-screens) {
+              width: 35px;
+              margin: 0;
+            }
+            @include respond-to(mobile-screens) {
+              width: 32px;
+              margin: 0;
+            }
+          }
+        }
+      }
+      &:last-child {
+        // width: auto;
+        // padding: 10px 15px;
+        // margin-left: 1px;
+        // // background: $primaryColor;
+        // border-top-right-radius: 4px;
+        // border-top-left-radius: 4px;
+        // @include respond-to(all-screens) {
+        //   display: none;
+        // }
+      }
+      &.current {
+        background: $primaryColor;
+        color: $fontColor;
+        padding-top: 20px;
+      }
+      img {
+        vertical-align: top;
+        // margin-left: 8px;
+      }
+      span {
+        &.respIconSize {
+          vertical-align: top;
+          margin-left: 4px;
+        }
+      }
+      .responNameHide {
+        display: block;
+        @include respond-to(mobToLap-screens) {
+          display: none;
+        }
+      }
+      .respIconSize {
+        img {
+          @include respond-to(mobToLap-screens) {
+            width: 26px;
+            margin: 0;
+          }
+          @include respond-to(mobile-screens) {
+            width: 22px;
+            margin: 0;
+          }
+        }
+      }
+      .responIconHide {
+        display: none;
+
+        @include respond-to(mobToLap-screens) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    display: none;
+    background: $whiteColor;
+    padding: 10px 15px;
+    width: 100%;
+    border: 1px solid $tabborder;
+    min-height: 200px;
+    position: relative;
+  }
+
+  .tab-content.current {
+    display: inherit;
+  }
+
+  .tabHeadText {
+    margin: 0px 0px 10px 0px;
+    font-size: 22px;
+    font-weight: normal;
+    @include respond-to(mobile-screens) {
+      font-size: 17px;
+    }
+  }
+}
+.map-date {
+  width: 600px !important;
+}
+.map-room {
+  width: 85px !important;
+}
+
+.map-adult {
+  width: 85px !important;
+}
+
+.map-child {
+  width: 120px !important;
+}
+
+// @media screen and (min-width: 480px) and (orientation: landscape) { // only for mobile landscape view
+//   .rightSide{
+//     top: 50px !important;
+//   }
+//   .rightSide .ScrollingBar {
+//       overflow: scroll;
+//       height: 285px;
+//   }
+// }
+
+.rightSide { 
+  @media screen and (min-width: 480px) and (max-width: 1024px) and (orientation: landscape) {
+    top: 70px !important;
+    .ScrollingBar {
+      overflow: scroll;
+      height: 200px;
+    }
+  }
+  background: $whiteColor;
+  width: 250px;
+  // min-height: 200px;
+  // max-height: 500px;
+  margin-left: 20px;
+  border: 1px solid $tabborder;
+  padding: 15px;
+  // margin-top: -15px;
+  margin-top: -70px;
+  position: sticky;
+  display: block;
+  top: 35px;
+  @include respond-to(all-screens) {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  @include respond-to(all-screens) {
+    position: fixed;
+    width: 250px;
+    right: -250px;
+    top: 158px;
+    z-index: 999;
+    transition: 0.1s ease-in-out;
+    -webkit-transition: 0.1s ease-in-out;
+    -moz-transition: 0.1s ease-in-out;
+    -ms-transition: 0.1s ease-in-out;
+    -o-transition: 0.1s ease-in-out;
+}
+  @media only screen and (max-width: 320px) and (min-width: 320px) and (max-height:375px)  {
+    position: absolute !important;
+    top: 1% ;
+    height:315px  !important;
+    width: 90%;
+    right: -290px;
+    overflow: visible !important;
+    
+  }
+  @media only screen and (max-width: 375px) and (min-width: 375px)  {
+    position: absolute !important;
+    top: -60px;
+    height:315px  !important;
+    width: 90% !important;
+    right: -340px;
+    overflow: visible !important;
+    
+  }
+
+  // @media only screen and (max-width: 991px) and (min-width: 375px) and (orientation:landscape)  {
+  //   position: absolute !important;
+  //   top: -9px;
+  //   height:292px  !important;
+  //   width: 90% !important;
+  //   right: -732px;
+  //   overflow: visible !important;
+    
+  // }
+
+
+
+  // @media only screen and (max-width: 425px) and (min-width: 425px)  {
+  //   position: absolute !important;
+  //   top: 1% ;
+  //   height:315px  !important;
+  //   width: 90%;
+  //   right: -383px;
+  //   overflow: visible !important;  
+  // }
+  
+  // @media only screen and (max-width: 425px) and (orientation:landscape) {
+  //   position: absolute !important;
+  //   top: -10px;
+  //   height:315px  !important;
+  //   width: 90%;
+  //   right: -383px;
+  //   overflow: visible !important;
+  // }
+
+  // @media only screen and (max-width: 375px) and (orientation:landscape) {
+  //   position: absolute !important;
+  //   top: -10px;
+  //   height:315px  !important;
+  //   width: 90%;
+  //   right: -340px;
+  //   overflow: visible !important;
+  // }
+
+  // @media only screen and (max-width: 320px) and (min-width: 320px) and (orientation:landscape) {
+  //   position: relative !important;
+  //   top: 19px;
+  //   height:315px  !important;
+  //   width: 90%;
+  //   right: -383px;
+  //   overflow: visible !important;  
+  // }
+  
+
+  //  @include respond-to(mobile-screens){display:none;}
+  &.leftItinerayShow {
+    right: 0px;
+    transition: 0.1s ease-in-out;
+  }
+
+  .itineraryResponsiveBtn {
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -87px;
+    background: $primaryColor;
+    padding: 5px;
+    top: 20%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: none;
+    border: 1px solid $borderColor;
+    cursor: pointer;
+    z-index: 999;
+    img {
+      width: 30px;
+    }
+    @include respond-to(all-screens) {
+      display: block;
+    }
+    @include respond-to(mobile-screens) {
+      top: 16%;
+    }
+    // @media only screen and (max-width: 991px) and (min-width: 375px) and (orientation:landscape)  {
+    //   top: 17% !important;
+    // }
+  }
+  .ScrollingBar{
+  @media only screen and (max-width: 480px) and (min-width: 320px)  {
+
+  overflow: scroll;
+  height:285px
+  }
+  // @media only screen and (max-width: 991px) and (min-width: 375px) and (orientation:landscape){
+  //   overflow: scroll;
+  //   height:275px
+
+  // }
+
+
+//   @media only screen and (max-width: 375px) and (min-width: 375px)  {
+//     overflow: scroll;
+//     height:280px
+//     }
+//   @media (max-width: 320px) and (orientation:landscape) {
+//     overflow: scroll;
+//     height:200px
+// }
+//   @media (max-width: 425px) and (orientation:landscape) {
+//   overflow: scroll;
+//   height: 205px
+// }
+
+
+  }
+  .rightHeadText {
+    vertical-align: middle;
+    align-items: center;
+    font-family: BebasNeue;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #464646;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 10px;
+    img {
+      width: 40px;
+      margin-top: -5px;
+      margin-left: -20px;
+    }
+    @include respond-to(all-screens) {
+      display: none;
+    }
+  }
+
+  .itineraryBoxDesign {
+    img {
+      margin-left: -16px;
+      margin-top: -57px;
+      width: 239px;
+      height: 63px;
+      display: block;
+      @include respond-to(all-screens) {
+        display: none;
+      }
+    }
+  }
+  .itineraryItems {
+    width: 100%;
+    min-height: 305px;
+    border-bottom: 1px solid #a1a1a1;
+    margin-top: 25px;
+    .dragDropImage {
+      width: 100%;
+      &.is-ready {
+        background: $primaryColor;
+      }
+      &.is-hidden {
+        display: none;
+      }
+    }
+    .itinerarySelItems {
+      padding: 0px;
+      list-style: none;
+      li {
+        position: relative;
+        .itineraryTitle {
+          position: relative;
+          z-index: 2;
+          padding: 8px 10px;
+          background: $primaryColor;
+          border: 1px solid $borderColor;
+          margin: 10px 0px 0px 0px;
+          border-radius: 4px;
+          a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: $whiteColor;
+            padding: 4px 8px;
+            display: inline-block;
+            vertical-align: middle;
+            border: 1px solid $borderColor;
+            box-shadow: inset 0px 2px 2px darkgrey;
+            img {
+              width: 20px;
+            }
+          }
+
+          h4 {
+            display: inline-block;
+            vertical-align: middle;
+            text-transform: uppercase;
+            margin: 5px;
+            font-weight: 500;
+            font-size: 15px;
+            color: #464646;
+            width: 85px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            span {
+              width: 100%;
+              font-size: 12px;
+              display: block;
+              font-weight: 200;
+              font-family: unset;
+              color: $fontColor;
+              img {
+                width: 10px;
+              }
+            }
+          }
+          span {
+            font-family: BebasNeue;
+            font-size: 20px;
+            font-weight: 500;
+            display: inline-table;
+            vertical-align: middle;
+            position: relative;
+            margin-top: 9px;
+          }
+
+          div.expandIcon {
+            width: 100%;
+            cursor: pointer;
+            img {
+              width: 20px !important;
+              margin: 0 auto;
+              display: block;
+            }
+          }
+
+          .closeBtn {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            padding: 0px 4px;
+            top: -8px;
+            right: -8px;
+            font-size: 11px;
+            display: block;
+            border: 2px solid $whiteColor;
+            background: $secondryColor;
+            border-radius: 50%;
+            color: $whiteColor;
+            @include respond-to(mobile-screens){
+              left: -2px;
+            }
+          }
+          
+        }
+        .itineraryCollapsecontent {
+          .card {
+            border: 1px solid #bab9b9;
+            border-top: none;
+            margin-top: -1px;
+            z-index: 1;
+            h2 {
+              font-size: 14px;
+              font-weight: 500;
+              display: inline-flex;
+              img {
+                width: 18px;
+                height: 100%;
+                margin-right: 5px;
+              }
+              span {
+                font-weight: 300;
+                color: $fontColor;
+              }
+            }
+            .card-body {
+              padding: 10px;
+              ul {
+                padding: 0px;
+                vertical-align: middle;
+                list-style: none;
+                li {
+                  display: inline-table;
+                  padding: 5px 4px;
+                  vertical-align: top;
+                  img {
+                    width: 16px;
+                  }
+                  .dateShow {
+                    width: 60px;
+                    border: 1px solid #6a6a6a;
+                    padding: 2px 4px;
+                    text-align: center;
+                    span {
+                      &:nth-child(1) {
+                        display: block;
+                        font-size: 12px;
+                        font-weight: 300;
+                      }
+                      &:last-child {
+                        display: block;
+                        font-size: 9px;
+                        font-weight: 500;
+                      }
+                    }
+                  }
+                  .timeShow {
+                    font-size: 10px;
+                    flex-direction: row;
+                    font-weight: 300;
+                    margin-top: 5px;
+                    img {
+                      width: 10px;
+                    }
+                  }
+                }
+              }
+              .rateShowTable {
+                list-style: none;
+                padding: 0px;
+                li {
+                  display: flex;
+                  padding: 5px;
+                  justify-content: space-between;
+                  align-items: center;
+                  span {
+                    font-size: 11px;
+                    font-weight: normal;
+                    width: 50%;
+                    text-align: left;
+                    &:last-child {
+                      text-align: right;
+                    }
+                  }
+                  &:last-child {
+                    border-top: 1px dashed $tabborder;
+                    span {
+                      font-weight: bold;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .itineraryTotal {
+    margin: 10px 0px;
+    text-transform: uppercase;
+    font-family: BebasNeue;
+    font-size: 32px;
+    font-weight: 500;
+    color: $fontColor;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #a1a1a1;
+  }
+
+  .itineraryBtns {
+    width: 100%;
+    text-align: center;
+    @media screen and(min-width: 320px) and (max-width: 520px) {
+      width:100%;
+      text-align: center;
+    }
+    .itinerarySave {
+      @include respond-to(desk-screens) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      padding: 6px 18px !important;
+      @media screen and(min-width: 320px) and (max-width: 520px) {
+        width:47%;
+        text-align: center;
+      }
+    }
+    .itineraryBook {
+      @include respond-to(desk-screens) {
+        width: 100%;
+      }
+
+      background: $secondryColor !important;
+      color: $whiteColor;
+      padding: 6px 18px !important;
+      @media screen and(min-width: 320px) and (max-width: 520px) {
+        width:51%;
+        text-align: center;
+      }
+    }
+
+    .itineraryEmail {
+      @include respond-to(desk-screens) {
+        width: 100%;
+      }
+      @media screen and(min-width: 320px) and (max-width: 520px) {
+        width:60%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+
+.roadmap {
+  position: relative;
+  z-index: 0;
+  left: 0;
+  top: 4px;
+  display: block;
+  @include respond-to(big-screens) {
+    top: 5px;
+  }
+
+  @include respond-to(all-screens) {
+    display: none;
+  }
+  img {
+    width: 89%;
+    @include respond-to(big-screens) {
+      width: 1300px;
+    }
+    @include respond-to(desk-screens) {
+      width: 88%;
+    }
+    @media screen and (min-width: 1440px) and (max-width: 1600px) {
+      width: 82%;
+    }
+  }
+}
+
+.searchBtn {
+  @extend %buttonStyle;
+  background: $primaryColor;
+  color: $fontColor;
+  border: 1px solid $borderColor;
+  img {
+    width: 20px;
+  }
+  &.completebtn {
+    background: $secondryColor;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  @include respond-to(mobile-screens) {
+    width: 100%;
+  }
+}
+
+.navbarBg .container > .navbar-collapse {
+  float: right;
+  display: flex !important;
+  align-items: center;
+}
+
+.selectDivsAl {
+  width: 100%;
+  float: left;
+  @extend %DateRangePicker;
+  .form-group {
+    display: block;
+    position: relative;
+    .seleboxs {
+      width: 100%;
+      /* height: 40px; */
+      background: transparent;
+      font-weight: 500;
+      border: 1px solid $tabborder;
+      margin-right: 5px;
+      padding: 2px;
+      position: relative;
+      input {
+        border: none;
+        background: none;
+        width: 100%;
+        height: 37px;
+        outline: none;
+        text-indent: 30px;
+        font-weight: normal;
+        @include respond-to(mobile-screens) {
+          font-size: 14px;
+        }
+      }
+    }
+    .seleboxs1 {
+      width: 398px;
+      /* height: 40px; */
+      background: transparent;
+      font-weight: 500;
+      border: 1px solid $tabborder;
+      margin-right: 5px;
+      padding: 2px;
+      position: relative;
+      @include respond-to(desk-screens) {
+        width: 100%;
+      }
+      @include respond-to(all-screens) {
+        width: 100%;
+      }
+      .dateInput {
+        width: 49% !important;
+        display: inline-block;
+        text-indent: 35px !important;
+        border: none;
+        background: none;
+        height: 37px;
+        outline: none;
+        text-indent: 30px;
+        font-weight: normal;
+        @include respond-to(mobile-screens) {
+          font-size: 14px;
+        }
+      }
+      .borderRig {
+        border-right: 1px solid $tabborder;
+      }
+      .calendImg {
+        top: 10px;
+        left: 8px;
+        width: 20px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.locationIcon {
+  font-size: 18px;
+  position: absolute;
+  top: 11px;
+  left: 8px;
+  color: #9b9b9b;
+}
+
+.sectionCard {
+  width: 100%;
+  float: left;
+  background: rgba(255, 255, 255, 0.8);
+  min-height: 70px;
+  margin: 0px 0px 15px 0px;
+  padding: 15px;
+  border: 1px solid $tabborder;
+  position: relative;
+  @include respond-to(desk-screens) {
+    padding: 10px;
+  }
+  @include respond-to(all-screens) {
+    padding: 10px;
+  }
+  &.searchRes {
+    background: $whiteColor;
+  }
+  .mapDiv {
+    width: 250px;
+    @include respond-to(all-screens) {
+      width: 100%;
+    }
+  }
+  .otherSteps {
+    width: 100%;
+    margin-left: 0px;
+    .navigation {
+      li {
+        padding: 0px 48px;
+        @include respond-to(desk-screens) {
+          padding: 0px 30px;
+        }
+        @include respond-to(lap-screens) {
+          padding: 0px 30px;
+        }
+        @include respond-to(mobToLap-screens) {
+          padding: 0px 15px;
+        }
+        @include respond-to(mobile-screens) {
+          padding: 0px 4px;
+        }
+        @media screen and(min-width: 480px) and (max-width: 520px) {
+          padding: 0px 11px;
+        }
+        &.line {
+          &:after {
+            width: 185px;
+            @include respond-to(lap-screens) {
+              width: 150px;
+            }
+            @include respond-to(desk-screens) {
+              width: 148px;
+            }
+            @include respond-to(mobToLap-screens) {
+              width: 95px;
+            }
+            @include respond-to(mobile-screens) {
+              width: 75px;
+              display: block;
+            }
+            @media screen and(min-width: 480px) and (max-width: 520px) {
+              left: 41px;
+            }
+          }
+        }
+      }
+    }
+    li:nth-child(1),
+    li:last-child {
+      cursor: pointer;
+    }
+  }
+  .oneWayStep {
+    .navigation {
+      li {
+        padding: 0 !important;
+        width: 40%;
+        &:nth-child(1),
+        &:last-child {
+          width: 10%;
+        }
+        &.line {
+          &::after {
+            left: 150px;
+            z-index: 0;
+            width: 100%;
+            @include respond-to(desk-screens) {
+              left: 140px;
+            }
+            @include respond-to(lap-screens) {
+              left: 140px;
+            }
+            @include respond-to(mobToLap-screens) {
+              left: 105px;
+            }
+            @include respond-to(mobile-screens) {
+              left: 70px;
+            }
+            @media screen and (min-width: 320px) and (max-width: 360px) {
+              left: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.seleboxs2 {
+  width: 150px;
+  position: relative;
+  @include respond-to(lap-screens) {
+    width: auto !important;
+    margin-top: 0px !important;
+  }
+  @include respond-to(all-screens) {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.roomSelection,
+.guestSelection {
+  display: inline-table !important;
+  @include respond-to(all-screens) {
+    width: 50%;
+  }
+  h6 {
+    font-weight: 300;
+    display: inline-table;
+    color: $fontColor;
+    margin-right: 10px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-table;
+    li {
+      display: inline-block;
+      padding: 10px;
+      a {
+        color: $fontColor;
+        text-decoration: none;
+        position: relative;
+        font-weight: normal;
+      }
+    }
+    li.active {
+      width: 30px;
+      height: 30px;
+      /* display: block; */
+      border-radius: 50px;
+      padding: 4px 10px;
+      background: $primaryColor;
+    }
+  }
+}
+
+// searchInfo css start
+
+.searchInfo {
+  h3 {
+    text-transform: uppercase;
+    font-size: 39px;
+    font-family: "BebasNeue";
+    font-weight: 300;
+    margin: 0 10px 0 0;
+    display: inline-table;
+    vertical-align: middle;
+    color: $fontColor;
+    @include respond-to(mobile-screens) {
+      font-size: 26px;
+    }
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: inline-table;
+    li.border {
+      border: 1px solid $tabborder !important;
+    }
+    li {
+      display: inline-table;
+      padding: 5px 15px;
+      text-align: center;
+      vertical-align: middle;
+      h5 {
+        margin: 0;
+        font-weight: 500;
+        color: $fontColor;
+        font-size: 15px;
+        @include respond-to(mobile-screens) {
+          font-size: 12px;
+        }
+      }
+      p {
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 0px;
+        color: $fontColor;
+        font-size: 12px;
+        @include respond-to(mobile-screens) {
+          font-size: 10px;
+          font-weight: 300;
+        }
+      }
+      img {
+        width: 20px;
+      }
+    }
+  }
+}
+
+//filter section css starts
+
+.filterBg {
+  background: rgba(0, 0, 0, 0.6);
+  width: 250px;
+  border: 1px solid $tabborder;
+  padding: 15px;
+  @include respond-to(desk-screens) {
+    width: 100%;
+  }
+  @include respond-to(all-screens) {
+    width: 100%;
+  }
+  // min-height: 300px;
+  .filterTitle {
+    display: none;
+    border-bottom: none;
+    padding-bottom: 0px;
+    h2 {
+      @include respond-to(all-screens) {
+        display: block;
+        border-bottom: none;
+        margin: 0px;
+      }
+      @include respond-to(desk-screens) {
+        display: block;
+        border-bottom: none;
+        margin: 0px;
+      }
+      @include respond-to(mobile-screens) {
+        font-size: 28px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        font-size: 26px;
+      }
+    }
+    @include respond-to(desk-screens) {
+      display: block;
+    }
+    @include respond-to(all-screens) {
+      display: block;
+    }
+    .downArrowImg {
+      float: right;
+      margin-top: 15px;
+      display: block;
+    }
+  }
+  .respDeskShow {
+    display: block;
+    @include respond-to(all-screens) {
+      display: none;
+    }
+    @include respond-to(desk-screens) {
+      display: none;
+    }
+  }
+  &.showFilterBg {
+    .respDeskShow {
+      display: block;
+      @include respond-to(all-screens) {
+        display: block;
+      }
+    }
+  }
+
+  h2 {
+    color: $whiteColor;
+    border-bottom: 1px solid #b7b7b7;
+    padding-bottom: 10px;
+    margin: 10px 0px;
+    font-size: 35px;
+    font-family: "BebasNeue";
+    font-weight: 300;
+
+    @include respond-to(desk-screens) {
+      display: none;
+      border-bottom: none;
+    }
+    @include respond-to(all-screens) {
+      display: none;
+      border-bottom: none;
+    }
+  }
+  h4 {
+    color: $whiteColor;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 10px 0px;
+  }
+  .searchInPut {
+    position: relative;
+    &:after {
+      @extend %inputIcons;
+      top: 5px;
+      left: 0;
+      width: 30px;
+      background: url("../images/search-tool.png") no-repeat;
+      background-size: 50%;
+      z-index: 2;
+    }
+    .searchByName {
+      border: none;
+      border-bottom: 1px solid #b7b7b7;
+      background: transparent;
+      width: 100%;
+      color: #fff;
+      font-size: 15px;
+      text-indent: 20px;
+      &::-moz-placeholder {
+        color: #fff;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  div {
+    border-bottom: 1px solid #b7b7b7;
+    padding-bottom: 10px;
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .rangeSlidername {
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 10px;
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .priceRange {
+    li {
+      img {
+        width: 85px;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 5px 0px;
+  }
+  li {
+    display: block;
+    padding: 1px 5px;
+    img,
+    p,
+    input,
+    span {
+      display: inline-table;
+      vertical-align: middle;
+      margin: 0px 0px 0px 0px;
+      color: $whiteColor;
+      font-weight: normal;
+      font-size: 13px;
+    }
+
+    .filtercheckbox {
+      position: absolute; // take it out of document flow
+      opacity: 0; // hide it
+
+      & + label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        color: $whiteColor;
+        font-weight: normal;
+        font-size: 13px;
+        p {
+          margin-top: 2px;
+        }
+      }
+
+      // Box.
+      & + label:before {
+        content: "";
+        margin-right: 4px;
+        margin-top: 2px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 15px;
+        height: 15px;
+        background: transparent;
+        border: 1px solid #fff;
+      }
+
+      // Box hover
+      &:hover + label:before {
+        background: $primaryColor;
+      }
+
+      // Box checked
+      &:checked + label:before {
+        background: $primaryColor;
+      }
+
+      // Checkmark. Could be replaced with an image
+      &:checked + label:after {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 9px;
+        background: $secondryColor;
+        width: 2px;
+        height: 2px;
+        box-shadow: 2px 0 0 $secondryColor, 4px 0 0 $secondryColor,
+        4px -2px 0 $secondryColor, 4px -4px 0 $secondryColor,
+        4px -6px 0 $secondryColor, 4px -8px 0 $secondryColor;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.filterResult {
+  width: 560px;
+  margin-left: 20px;
+  @include respond-to(desk-screens) {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  @include respond-to(all-screens) {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  .clickMoreBtn {
+    padding: 10px 20px;
+    outline: none;
+  }
+  .newTabBtn {
+    border: 1px solid #4e4a4a;
+    background: $whiteColor;
+    font-size: 13px;
+    float: right;
+    margin-bottom: 10px;
+    padding: 5px;
+    outline: none;
+    cursor: pointer;
+    img {
+      width: 15px;
+    }
+  }
+  .cardDetailsHowBg {
+    width: 100%;
+    height: 1000px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 11px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border: 1px solid $tabborder;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      width: 100%;
+      height: 1000px;
+      overflow-y: unset;
+    }
+    .sectionCard {
+      .rateShowDiv {
+        @include respond-to(lap-screens) {
+          width: 130px;
+        }
+        .priceDiv {
+          @include respond-to(lap-screens) {
+            left: 20px;
+            top: -10px;
+          }
+          @include respond-to(mobile-screens) {
+            width: 100%;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  .sectionCard {
+    margin: 0px 0px 15px 0px;
+    background: $whiteColor;
+
+  }
+  .navigation {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    li {
+      display: inline-table;
+      vertical-align: middle;
+      position: relative;
+      padding: 0px 20px;
+      @include respond-to(desk-screens) {
+        padding: 0px 30px;
+      }
+      @include respond-to(mobToLap-screens) {
+        padding: 0px 15px;
+      }
+      @include respond-to(mobile-screens) {
+        display: inline-block;
+        padding: 0px 4px;
+      }
+      img {
+        width: 35px;
+        @include respond-to(mobile-screens) {
+          width: 25px;
+        }
+      }
+      span {
+        font-size: 12px;
+        font-weight: 300;
+        @include respond-to(mobile-screens) {
+          font-size: 10px;
+        }
+      }
+      a {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: $whiteColor;
+        /* float: left; */
+        display: block;
+        border: 1px solid $tabborder;
+        padding: 5px;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        color: $fontColor;
+        text-decoration: none;
+        position: relative;
+        z-index: 2;
+        @include respond-to(mobile-screens) {
+          width: 25px;
+          height: 25px;
+          font-size: 14px;
+          padding: 2px;
+        }
+      }
+    }
+    li.active a {
+      background: $primaryColor;
+      border: 1px solid $borderColor;
+    }
+  }
+}
+
+.rangeVauleLeft {
+  color: $whiteColor;
+  font-size: 14px;
+}
+
+.rangeVauleRight {
+  color: $whiteColor;
+  float: right;
+  font-size: 14px;
+}
+
+.line:after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  border-top: 2px solid $tabborder;
+  left: 68px;
+  z-index: 0;
+  width: 98px;
+  z-index: 1;
+  @include respond-to(desk-screens) {
+    left: 56px;
+    width: 150px;
+  }
+  @include respond-to(mobile-screens) {
+    left: 20px;
+    top: 37px;
+  }
+}
+
+.line.active::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: -14px;
+  background: url("../images/Your Itinerary Tourist.svg") no-repeat;
+  width: 30px;
+  height: 40px;
+  background-size: 95%;
+  @include respond-to(mobile-screens) {
+    width: 25px;
+    height: 35px;
+    top: 15%;
+    display: none;
+  }
+}
+
+.owl-carousel {
+  width: 160px !important;
+
+  cursor: pointer;
+  @include respond-to(all-screens) {
+    width: 200px !important;
+  }
+  @include respond-to(mobToLap-screens) {
+    width: 100% !important;
+    height: 200px;
+  }
+  .item {
+    position: relative;
+    .leftArrow {
+      position: absolute;
+      cursor: pointer;
+      top: 43%;
+      left: 5px;
+      background: #0009;
+      width: 30px;
+      height: 30px;
+      padding: 7px 11px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 12px;
+    }
+    .rightArrow {
+      cursor: pointer;
+      position: absolute;
+      top: 43%;
+      right: 5px;
+      background: #0009;
+      width: 30px;
+      height: 30px;
+      padding: 7px 11px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 12px;
+    }
+    img {
+      width: 160px !important;
+      height: 160px;
+      object-fit: cover;
+      @include respond-to(all-screens) {
+        width: 100% !important;
+      }
+      @include respond-to(mobToLap-screens) {
+        width: 100% !important;
+        height: 200px;
+      }
+    }
+  }
+}
+
+#StateLessRoomResInfo,
+#RoomResInfo {
+  .thumbnail-info {
+    top: -29px;
+  }
+  .thumbnail-expand {
+    top: -25px;
+  }
+}
+
+.thumbnail-info {
+  font-size: 12px;
+  background: #00000073;
+  color: white;
+  display: inline-block;
+  position: relative;
+  top: -25px;
+  left: 0px;
+  border-radius: 2px;
+  padding: 1px;
+}
+
+.thumbnail-expand {
+  font-size: 12px;
+  background: #00000073;
+  color: white;
+  display: inline-block;
+  position: relative;
+  top: -21px;
+  float: right;
+  right: 0px;
+  border-radius: 2px;
+  padding: 1px;
+}
+
+.non-filter-result-heading {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.owl-prev {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  background: rgba(0, 0, 0, 0.6) !important;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  // font-size: 24px !important;
+  outline: none;
+  span {
+    color: $whiteColor;
+  }
+}
+
+.owl-next {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  background: rgba(0, 0, 0, 0.6) !important;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  // font-size: 24px !important;
+  outline: none;
+  span {
+    color: $whiteColor;
+  }
+}
+
+.listTitle {
+  border-bottom: 1px solid #898989;
+}
+
+.detailsBg {
+  width: 220px;
+  margin-left: 8px;
+  @include respond-to(desk-screens) {
+    width: 300px;
+  }
+  @include respond-to(all-screens) {
+    width: 285px;
+  }
+  @include respond-to(mobToLap-screens) {
+    width: 100%;
+    margin-left: 0px;
+  }
+  &.selectNewInfo {
+    width: 375px;
+    margin-left: 10px;
+    @include respond-to(desk-screens) {
+      width: 300px;
+    }
+    @include respond-to(lap-screens) {
+      width: auto;
+    }
+    @include respond-to(mobToLap-screens) {
+      width: 100%;
+      margin-left: 0px;
+    }
+    h2 {
+      margin: 0px 0px;
+      color: $secondryColor;
+      font-size: 30px;
+      text-align: left;
+      font-weight: 300;
+      @include respond-to(mobile-screens) {
+        font-size: 14px;
+      }
+    }
+    p {
+      text-align: left;
+      margin: 0;
+      font-size: 12px !important;
+    }
+    .priceDiv {
+      background: transparent;
+      border: none;
+      top: 0;
+      left: 0;
+      right: unset;
+      .valuesShow {
+        display: inline-block;
+        h2 {
+          // margin: 0px 0px;
+          // color: $secondryColor;
+          // font-size: 30px;
+          // text-align: center;
+          // font-weight:300;
+          margin: 0px 0px;
+          color: #551400;
+          // font-size: 22px;
+          font-size: 18px;
+          text-align: center;
+          font-weight: 600;
+          word-break: break-word;
+        }
+        p {
+          text-align: left;
+          margin: 0;
+          font-size: 12px;
+        }
+      }
+
+      .selectRoomBtn {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        float: left;
+        margin-right: 15px;
+        margin-top: 8px;
+      }
+    }
+    .mapInfoShow {
+      margin-top: 5px;
+      width: 100%;
+    }
+  }
+  p {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: left;
+    img {
+      width: 15px;
+      display: inline-table;
+      vertical-align: top;
+    }
+    a {
+      display: inline-table;
+      vertical-align: middle;
+      width: 190px;
+      color: $fontColor;
+      @include respond-to(mobToLap-screens) {
+        width: 80%;
+      }
+      &:hover {
+        color: $fontColor;
+      }
+    }
+  }
+  h4 {
+    font-weight: 300;
+    font-size: 17px;
+    margin-top: 5px;
+    @include respond-to(mobile-screens) {
+      font-size: 14px;
+    }
+  }
+  span {
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 19px;
+    span {
+      width: 100%;
+      display: block;
+      cursor: pointer;
+    }
+  }
+}
+
+.listTitle {
+  span {
+    font-size: 14px;
+  }
+  img {
+    width: 90px;
+  }
+}
+
+.priceDiv {
+  position: relative;
+  /* right: -5px; */
+  right: -10px;
+  top: -15px;
+  padding: 2px 5px;
+  border: 1px solid $tabborder;
+  border-top: none;
+  background: $whiteColor;
+  min-width: 115px;
+  @include respond-to(desk-screens) {
+    top: 0px;
+    right: 5px;
+    position: absolute;
+  }
+  @include respond-to(lap-screens) {
+    right: 0;
+    top: 0;
+  }
+  @include respond-to(mobToLap-screens) {
+    right: 0;
+    top: 0;
+    border: none;
+    border: 1px solid $tabborder;
+    max-width: 155px;
+  }
+  @include respond-to(mobile-screens) {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  strike {
+    text-decoration-color: #f00;
+    font-size: 20px;
+    float: right;
+    /* width: 100%; */
+    font-weight: 500;
+    color: $tabborder;
+  }
+  h2 {
+    // margin: 0px 0px;
+    // color: $secondryColor;
+    // font-size: 26px;
+    // text-align: center;
+    // font-weight:300;
+    margin: 0px 0px;
+    color: #551400;
+    // font-size: 22px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    word-break: break-word;
+  }
+  p {
+    text-align: right;
+    margin: 0;
+    font-size: 12px;
+    @include respond-to(mobToLap-screens) {
+      text-align: center;
+    }
+  }
+  h4 {
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
+
+// Compare Section Start
+
+.compareCard {
+  width: 100%;
+  float: left;
+  background: #fff;
+  min-height: 70px;
+  margin: 0px 0px 15px 0px;
+  padding: 15px;
+  border: 1px solid #6a6a6a;
+  position: relative;
+
+  .compare-title {
+    text-transform: uppercase;
+    font-family: "BebasNeue";
+    font-weight: 300;
+    font-size: 30px;
+    color: #464646;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .compare-list {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    .compare-hotel {
+      width: 400px;
+      padding-bottom: 10px;
+      font-size: 18px;
+      display: flex;      
+      .inner-width {
+        width: 250px;
+      }
+      span {
+        padding-left: 10px;
+        i {
+          border: 1px solid;
+          width: 24px;
+        }
+      }
+    }
+  }
+
+  .compare-btn-section {
+    padding: 10px 0;
+    text-align: center;
+    .compare-sbmt {
+      background: #551400 !important;
+      color: #ffffff;
+      padding: 6px 18px !important;
+      border: 1px solid #916800;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: middle;
+      text-transform: uppercase;
+      outline: none;
+      box-shadow: 0 2px 0px 0px rgba(85, 20, 0, 0.75);
+    }
+  }
+  
+}
+
+.compareBtn {
+	float: right;
+	background: #fec637;
+	color: #464646;
+	border: 1px solid #916800;
+	font-size: 12px;
+	padding: 9px 22px;
+	position: absolute;
+	bottom: 35px;
+  right: 7px;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  outline: none;
+  box-shadow: 0 2px 0px 0px rgba(85, 20, 0, 0.75);
+}
+
+.compare-hotels-header {
+  background: #cfcfcf;
+  padding-bottom: 0;
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      margin: 0 10px;
+      font-size: 20px;
+      cursor: pointer;
+      color: grey;
+
+      &.active {
+        font-weight: bold;
+        color: #000;
+      }
+    }
+  }
+}
+.compare-modal-body {
+  height: 600px;
+  overflow: scroll;
+  .compare-description {
+    width: 275px;
+    margin: 20px 0;
+    .compare-loop-details {
+      padding: 0 10px;
+      img {
+        width: 275px;
+        height: 200px;
+      }
+      
+      .compare-loop-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 7px;
+      }
+      .compare-loop-price {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .compare-loop-address {
+        font-weight: bold;
+      }
+    }
+    
+  }
+
+  .compare-amenities {
+    width: 275px;
+    margin: 20px 0;
+    .compare-loop-details {
+      padding: 0 10px;
+      img {
+        width: 275px;
+        height: 200px;
+      }
+      
+      .compare-loop-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 7px;
+      }
+      .compare-loop-price {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .compare-loop-address {
+        font-weight: bold;
+      }
+      .compare-loop-amenities {
+        img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+
+  .compare-map {
+    margin: 20px 0px;
+    .compare-loop-details {
+      width: 275px;
+      margin: 20px 7px;
+      img {
+        width: 275px;
+        height: 200px;
+      }
+      
+      .compare-loop-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 7px;
+
+        img {
+          padding-left: 3px;
+          width: auto;
+          height: auto;
+        }
+      }
+      .compare-loop-price {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .compare-loop-address {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+// Compare Section End
+
+.selectRoomBtn {
+  @extend %buttonStyle;
+  float: right;
+  background: $primaryColor;
+  color: $fontColor;
+  border: 1px solid $borderColor;
+  font-size: 12px;
+  padding: 9px 22px;
+  /* margin-bottom: 26px; */
+  position: absolute;
+  bottom: 12px;
+  right: 7px;
+  @include respond-to(lap-screens) {
+    right: 10px;
+  }
+  @include respond-to(mobile-screens) {
+    width: 100%;
+    position: relative;
+    right: 0px;
+    top: 0px;
+  }
+}
+
+.navBorderRight::after {
+  content: "";
+  border-right: 1px solid #898989;
+  width: 1px;
+  height: 20px;
+  padding-right: 0px;
+  position: absolute;
+  right: 1px;
+}
+
+.customWrapper {
+  font-weight: 300;
+  padding: 10px 20px;
+  font-size: 13px;
+  background: #fff;
+}
+
+.downarrowStyle {
+  width: 45px;
+  margin: auto;
+  border: 1px solid #a7a7a7;
+  display: flex;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.downarrowStyle img {
+  width: 25px;
+  height: 25px;
+}
+
+.noHotels {
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+
+.noHotels i {
+  font-size: 80px;
+  color: #c1c1c1;
+  margin-bottom: 20px;
+}
+
+.noHotelText {
+  text-align: center;
+  width: 100%;
+  font-size: 35px;
+  color: #c1c1c1;
+
+  font-family: BebasNeue;
+  font-weight: 300;
+  @include respond-to(mobile-screens) {
+    font-size: 20px;
+  }
+}
+
+/* range style */
+
+input[type="range"] {
+  // height: 25px;
+  -webkit-appearance: none;
+  margin: 0px 0;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: $whiteColor;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #000000;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: $whiteColor;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: $whiteColor;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: $whiteColor;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid $whiteColor;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: $whiteColor;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: $whiteColor;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: $whiteColor;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+input[type="range"]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497e3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: $whiteColor;
+  cursor: pointer;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: $whiteColor;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: $whiteColor;
+}
+
+//select your room css starts
+.selectRoomBg {
+  width: 100%;
+  border: 1px solid $tabborder;
+  margin-bottom: 15px;
+  &.selectNewRooMdetail {
+    background: #fff;
+    padding: 15px;
+    .res-column {
+      @include respond-to(lap-screens) {
+        width: 100%;
+      }
+      @include respond-to(mobToLap-screens) {
+        width: 100%;
+      }
+    }
+    .owl-carousel {
+      width: 400px !important;
+      height: 200px;
+      display: block;
+      @include respond-to(desk-screens) {
+        width: 300px !important;
+      }
+      @include respond-to(all-screens) {
+        width: 100% !important;
+        height: 200px;
+      }
+      @include respond-to(mobToLap-screens) {
+        width: 100% !important;
+      }
+      .item {
+        width: 400px;
+        height: 250px;
+        @include respond-to(desk-screens) {
+          width: 300px !important;
+        }
+        @include respond-to(all-screens) {
+          width: 100% !important;
+          height: 200px;
+        }
+        @include respond-to(mobToLap-screens) {
+          width: 100% !important;
+          height: 200px;
+        }
+        img {
+          width: 400px !important;
+          height: 250px;
+          @include respond-to(desk-screens) {
+            width: 300px !important;
+          }
+          @include respond-to(all-screens) {
+            width: 100% !important;
+            height: 200px;
+          }
+          @include respond-to(mobToLap-screens) {
+            width: 100% !important;
+            height: 200px;
+          }
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-right: 15px;
+      width: 300px;
+      @include respond-to(mobile-screens) {
+        width: 100%;
+      }
+      li {
+        display: block;
+        padding: 2px;
+        font-size: 14px;
+      }
+    }
+    p {
+      font-size: 14px;
+      @include respond-to(mobile-screens) {
+        font-size: 12px;
+      }
+    }
+    .nearUsContent {
+      list-style: circle;
+      li {
+        padding: 2px;
+        font-size: 14px;
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .borderTop {
+      border-top: 1px dashed $tabborder;
+      padding-top: 10px;
+      width: 100%;
+    }
+  }
+  mark {
+    background-color: inherit;
+    font-weight: 600;
+  }
+  .selectRoomTitle {
+    width: 100%;
+    background: $titleBg;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    border-bottom: 1px solid $tabborder;
+    @extend %NewTabView;
+    h4 {
+      color: $fontColor;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0px;
+      font-size: 18px;
+      position: relative;
+      @include respond-to(mobile-screens) {
+        font-size: 14px;
+      }
+      img {
+        width: 13px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+    }
+  }
+  @media screen and (min-width: 767px) {
+    .bottom-book-btn {
+      float: right;
+      right: 10px;
+      bottom: 8px;
+    }
+
+    .bottom-btn-pad {
+      padding-bottom: 35px !important;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .bottom-book-btn {
+      display: none;
+    }
+  }
+
+  .selectRoomItemsBg {
+    width: 100%;
+    padding: 10px;
+    background: $whiteColor;
+    position: relative;
+    .d-inline-flex {
+      @include respond-to(mobile-screens) {
+        display: flex !important;
+      }
+    }
+    .seleboxs1 {
+      width: 450px;
+      border: 1px solid $tabborder;
+      display: inline-table;
+      margin-right: 10px;
+      height: 35px;
+      position: relative;
+      /* vertical-align: middle; */
+      @include respond-to(desk-screens) {
+        width: 540px;
+      }
+      @include respond-to(all-screens) {
+        width: 100%;
+      }
+      padding: 2px 5px;
+      @extend %DateRangePicker;
+      img {
+        width: 18px;
+        margin-right: 6px;
+      }
+      .borderRight {
+        margin-right: 2px;
+        border-right: 1px solid $tabborder;
+      }
+      input {
+        width: 90px;
+        border: none;
+        background: none;
+        font-size: 14px;
+        outline: none;
+        text-indent: 10px;
+        vertical-align: middle;
+        @include respond-to(desk-screens) {
+          width: 110px;
+        }
+        @include respond-to(lap-screens) {
+          width: 40%;
+        }
+        @include respond-to(mobile-screens) {
+          width: 44%;
+          text-align: center;
+        }
+      }
+    }
+    .selectDivsAl {
+      display: inline-flex;
+      select {
+        width: 70px;
+        padding: 5px;
+        height: 35px;
+        border: 1px solid $tabborder;
+        -webkit-appearance: none;
+        font-size: 14px;
+        background: url("../images/selarrow.png") no-repeat 94% 50%;
+        vertical-align: middle;
+        margin-right: 10px;
+        outline: none;
+        @include respond-to(lap-screens) {
+          width: 185px;
+          margin-top: 10px;
+        }
+      }
+      .search-room {
+        @include respond-to(lap-screens) {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .sectionCard {
+      .imagesection {
+        width: 200px;
+
+        @include respond-to(lap-screens) {
+          width: 200px !important;
+        }
+        @include respond-to(all-screens) {
+          width: 100% !important;
+        }
+        @include respond-to(desk-screens) {
+          width: 100%;
+        }
+        .owl-carousel {
+          cursor: pointer;
+          width: 200px !important;
+          height: 160px;
+          @include respond-to(lap-screens) {
+            width: 100% !important;
+          }
+          @include respond-to(all-screens) {
+            width: 100% !important;
+          }
+          @include respond-to(mobToLap-screens) {
+            height: 200px;
+          }
+          @include respond-to(desk-screens) {
+            width: 100% !important;
+            height: 200px;
+          }
+          .item img {
+            width: 200px !important;
+            height: 160px;
+            object-fit: cover;
+            @include respond-to(all-screens) {
+              width: 100% !important;
+            }
+            @include respond-to(desk-screens) {
+              width: 100% !important;
+              height: 190px;
+            }
+            @include respond-to(mobToLap-screens) {
+              height: 200px;
+            }
+          }
+        }
+      }
+      .hotelInfoDet {
+        margin-left: 10px;
+        width: 200px;
+        @include respond-to(mobToLap-screens) {
+          margin: 10px 0px;
+        }
+        h6 {
+          font-weight: 300;
+          font-size: 17px;
+          margin-top: 5px;
+        }
+        p {
+          margin: 0;
+          font-size: 12px;
+          font-weight: 500;
+          color: $fontColor;
+          margin-left: 10px;
+          @include respond-to(mobToLap-screens) {
+            margin-left: 0px;
+          }
+        }
+        ul {
+          margin-top: 15px !important;
+          li {
+            p {
+              @include respond-to(mobToLap-screens) {
+                width: auto !important;
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+        span {
+          margin-top: 10px;
+        }
+      }
+      .detailsBg {
+        width: 205px;
+        margin: 0px 4px;
+        @include respond-to(desk-screens) {
+          width: 200px;
+        }
+        @include respond-to(lap-screens) {
+          width: 234px;
+          margin-top: 10px;
+        }
+        @include respond-to(mobToLap-screens) {
+          width: 100%;
+          margin: 10px 0px;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: inline-table;
+          li {
+            img {
+              width: 15px;
+              display: inline-table;
+              vertical-align: middle;
+            }
+            p {
+              font-size: 12px;
+              display: inline-table;
+              font-weight: 300;
+              color: $fontColor;
+              vertical-align: baseline;
+              margin-bottom: 0px;
+              width: 160px;
+              @include respond-to(desk-screens) {
+                width: 150px;
+              }
+              @include respond-to(mobToLap-screens) {
+                width: 83%;
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+        span {
+          position: relative;
+          cursor: pointer;
+          width: 100%;
+          display: block;
+          margin-top: 10px;
+          &:hover {
+            .moreDetailToolTip {
+              display: block;
+            }
+          }
+          .moreDetailToolTip {
+            position: absolute;
+            background: #ffffff;
+            z-index: 9;
+            padding: 10px;
+            width: 400px;
+            border: 1px solid $primaryColor;
+            left: 0px;
+            top: 25px;
+            -webkit-box-shadow: 2px 2px 6px 0px #d4d0d0;
+            -moz-box-shadow: 2px 2px 6px 0px #d4d0d0;
+            display: none;
+            @include respond-to(mobile-screens) {
+              width: 100%;
+              left: 0px;
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              top: -8px;
+              left: 17px;
+              border-left: 8px solid transparent;
+              border-right: 8px solid transparent;
+              border-bottom: 8px solid $secondryColor;
+              box-shadow: 2px 2px 6px 0px #d4d0d0;
+            }
+            p {
+              font-weight: 300;
+              color: $fontColor;
+              strong,
+              b {
+                font-weight: bold;
+                color: $fontColor;
+              }
+            }
+          }
+        }
+        .freeCancelPop {
+          position: relative;
+          cursor: pointer;
+          color: rgb(0, 109, 240);
+
+          &:hover {
+            .moreDetailToolTip1 {
+              display: block;
+            }
+          }
+          .moreDetailToolTip1 {
+            position: absolute;
+            background: #ffffff;
+            z-index: 9;
+            padding: 10px;
+            width: 400px;
+            border: 1px solid $primaryColor;
+            left: 0px;
+            top: 25px;
+            -webkit-box-shadow: 2px 2px 6px 0px #d4d0d0;
+            -moz-box-shadow: 2px 2px 6px 0px #d4d0d0;
+            display: none;
+            @include respond-to(mobile-screens) {
+              width: 100%;
+              left: 0px;
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              top: -8px;
+              left: 17px;
+              border-left: 8px solid transparent;
+              border-right: 8px solid transparent;
+              border-bottom: 8px solid $secondryColor;
+              box-shadow: 2px 2px 6px 0px #d4d0d0;
+            }
+            p {
+              font-size: 14px;
+              font-weight: 300;
+              color: $fontColor;
+              margin-bottom: 5px;
+            }
+            table {
+              border: 1px solid #ddd;
+              thead {
+                tr {
+                  th {
+                    background: #ddd;
+                    text-align: center;
+                    padding: 2px;
+                    border: 1px solid $borderColor;
+                    color: $fontColor;
+                  }
+                  @include respond-to(mobile-screens) {
+                    font-size: 10px;
+                  }
+                }
+              }
+              tbody {
+                tr {
+                  td {
+                    text-align: center;
+                    padding: 2px;
+                    border: 1px solid $borderColor;
+                    color: $fontColor;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .rateShowDiv {
+        width: 135px;
+
+        @include respond-to(desk-screens) {
+          width: 180px;
+          position: relative;
+        }
+        @include respond-to(lap-screens) {
+          width: 140px;
+        }
+        @include respond-to(mobToLap-screens) {
+          width: 100%;
+          position: relative;
+          margin-top: 15px;
+        }
+        img {
+          float: right;
+          margin-top: 35px;
+          display: block;
+          @include respond-to(desk-screens) {
+            margin-top: 65px;
+            width: 45px;
+            position: absolute;
+            top: 35px;
+            right: 0;
+          }
+          @include respond-to(lap-screens) {
+            width: 45px;
+            float: right;
+            position: relative;
+            right: 10px;
+          }
+          @include respond-to(mobToLap-screens) {
+            float: unset;
+            margin-top: 35px;
+            position: absolute;
+            right: 140px;
+            bottom: 0;
+          }
+          @include respond-to(mobile-screens) {
+            display: none;
+          }
+        }
+        .priceDiv {
+          @include respond-to(mobToLap-screens) {
+            left: 0;
+            top: 0px;
+            max-width: 155px;
+            bottom: 0;
+            position: relative;
+          }
+          @include respond-to(mobile-screens) {
+            left: 0;
+            top: 15px;
+            max-width: 100%;
+            bottom: 0;
+            position: relative;
+          }
+        }
+        .selectRoomBtn {
+          @include respond-to(mobToLap-screens) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+          }
+          @include respond-to(mobile-screens) {
+            position: relative;
+            margin-top: 22px;
+            width: 100%;
+          }
+        }
+
+        .dragDropText {
+          font-size: 12px;
+          float: right;
+          width: 100%;
+          display: block;
+          text-align: right;
+          @include respond-to(desk-screens) {
+            position: absolute;
+            top: 60%;
+            right: 50px;
+          }
+          @include respond-to(mobToLap-screens) {
+            position: absolute;
+            top: 0;
+            right: 125px;
+            width: auto;
+          }
+          @include respond-to(mobile-screens) {
+            display: none;
+          }
+        }
+      }
+    }
+    .reserveBtn {
+      top: 8px;
+      right: 10px;
+      bottom: unset;
+      @include respond-to(mobToLap-screens) {
+        position: fixed;
+        bottom: 0 !important;
+        top: unset !important;
+        z-index: 999;
+        width: 100%;
+        height: 45px;
+        margin: 0;
+        left: 0;
+        border-radius: 0px;
+      }
+      @include respond-to(mobile-screens) {
+        right: 0px;
+      }
+    }
+  }
+}
+@include respond-to(mobile-screens) {
+  .widthDiv{
+    width: 100% !important;
+    position: relative !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}.didCurrency{
+  left: 0 !important;
+  top: 10px !important;
+  max-width: 50% !important;
+  bottom: 0 !important;
+  position: relative !important;
+}
+  .divCheck{
+    top: 0px !important;
+    float: right !important;
+    position: absolute !important;
+      right: 0px !important;
+      text-align: center !important;
+width: 50% !important;
+}
+}
+
+@include respond-to(mobile-screens){
+  .imgMarginHotels{
+  margin-left: 0px !important;
+  }
+}
