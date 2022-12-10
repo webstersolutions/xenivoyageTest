@@ -11,7 +11,7 @@
     "country-data": "0.0.31",
     "crypto-json": "^2.0.2",
     "cryptr": "^4.0.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-history-api-fallback": "^2.2.1",
     "font-awesome": "^4.7.0",
     "google-maps-react": "^2.0.2",
